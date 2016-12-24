@@ -7,9 +7,6 @@ Membuat aplikasi _installer_ yang menyediakan _bundle development environment_ d
 Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
 
 1. Full-stack
-
-...Mengandung : 
-
    - Apache2
    - PHP 7
    - MySql
@@ -18,23 +15,18 @@ Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
    - Git
    - Composer
    - Firefox Developer Edition
-   
 2. Front-end
    - NodeJS
    - NPM
    - Bower
-   
 3. Back-end 
-
 4. Mobile 
    - Android Studio
    - SQLite
-
 5. Student
    - CodeBlock 
    - NetBeans
    - Libre Office
-
 6. Ada ide lain ?
 
 ## Latar belakang proyek ini dibuat :
