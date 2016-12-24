@@ -32,6 +32,7 @@ Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
 ## Latar belakang proyek ini dibuat :
 Proyek ini meneruskan [Tea Module Installer](https://github.com/tealinuxos/tea-module-installer). Karena aplikasi installer tersebut hanya dapat berjalan di TeaLinuxOS, kami ingin installer ini bisa jalan di lintas Linux distro, sehingga lebih banyak developer yang akan terbantu.
 
+Proyek ini juga terinspirasi dari [Laptop Script](https://github.com/thoughtbot/laptop) sebuah _script_ yang dapat merubah Mac menjadi mesin Web Development yang lengkap dan mudah.
 ## Rencana : 
 
 ### Script : handle by [@mnirfan](https://github.com/mnirfan)
