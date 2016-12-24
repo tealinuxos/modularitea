@@ -7,6 +7,7 @@ Membuat aplikasi _installer_ yang menyediakan _bundle development environment_ d
 Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
 
 1. Full-stack
+
 ...Mengandung : 
    - Apache2
    - PHP 7
@@ -36,14 +37,17 @@ Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
 Proyek ini meneruskan [Tea Module Installer](https://github.com/tealinuxos/tea-module-installer). Karena aplikasi installer tersebut hanya dapat berjalan di TeaLinuxOS, kami ingin installer ini bisa jalan di lintas Linux distro, sehingga lebih banyak developer yang akan terbantu.
 
 ## Rencana : 
+
 ### Script : handle by [@mnirfan](https://github.com/mnirfan)
 * Bash
 * Python
+
 ### Front-end App : handle by [@dikyarga](https://github.com/dikyarga)
-* Electron
+* [Electron](http://electron.atom.io/)
 * HTML, CSS dan JavaScript
-* VueJS
+* [VueJS](http://vuejs.org/)
 * [Element](http://element.eleme.io/)
+
 ### Design : handle by [@rezafaizarahman](https://github.com/rezafaizarahman)
 
 ## Cara ikut kontribusi : 
