@@ -7,11 +7,11 @@ Membuat aplikasi _installer_ yang menyediakan _bundle development environment_ d
 Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
 
 1. Full-stack
-   - Apache2
-   - PHP 7
-   - MySql
+   - [Apache2](https://httpd.apache.org/) - Webserver
+   - [PHP 7](http://php.net) 
+   - [MySql](https://www.mysql.com/) 
    - PHPMyAdmin
-   - Atom
+   - [Atom](https://atom.io/) - A hackable text editor 
    - Git
    - Composer
    - Firefox Developer Edition
