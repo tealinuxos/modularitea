@@ -44,7 +44,7 @@ Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
 ## Latar belakang proyek ini dibuat :
 Proyek ini meneruskan [Tea Module Installer](https://github.com/tealinuxos/tea-module-installer). Karena aplikasi installer tersebut hanya dapat berjalan di TeaLinuxOS, kami ingin installer ini bisa jalan di lintas distro Linux, sehingga lebih banyak _developer_ yang merasakan manfaatnya :).
 
-Proyek ini juga terinspirasi dari [Laptop Script](https://github.com/thoughtbot/laptop) sebuah _script_ yang dapat merubah Mac menjadi mesin Web Development yang lengkap dan mudah.
+Proyek ini juga terinspirasi dari [Laptop Script](https://github.com/thoughtbot/laptop) sebuah _script_ yang dapat merubah Mac menjadi mesin Web Development yang lengkap dengan mudah.
 ## Rencana :
 
 ### Script : handle by [@mnirfan](https://github.com/mnirfan)
@@ -67,5 +67,5 @@ Proyek ini juga terinspirasi dari [Laptop Script](https://github.com/thoughtbot/
 * Bantu buat dokumentasi yang lebih baik
 
 ## Lain-lain :
-* Untuk pengguna yang masih bingung memilih _bundle_, bisa di refrensikan ke situs ini : [What is the best programming language for me?](http://www.bestprogramminglanguagefor.me)
+* Untuk pengguna yang masih bingung memilih _bundle_, bisa di refrensikan ke situs ini : [What is the best programming language for me?](http://www.bestprogramminglanguagefor.me) atau [Which Programming Language Should I Learn?](http://choosing-a-language.techboss.co)  
 * Setelah selesai memasang _bundle_ lalu di beri tutorial singkat ? di awali dengan memberi _overview_ tentang _tech stack_ yang dipilih.  
