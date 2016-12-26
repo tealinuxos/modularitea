@@ -11,25 +11,35 @@ Selayaknya mie instan, kamu bisa bisa memilih berbagai macam rasa :
     Mengandung :
    - [Apache2](https://httpd.apache.org/) - Webserver
    - [PHP 7](http://php.net)
+   - [Composer](https://getcomposer.org/) -  Dependency Manager for PHP
    - [MySql](https://www.mysql.com/)
-   - PHPMyAdmin
+   - [PHPMyAdmin](https://www.phpmyadmin.net/) - Bringing MySQL to the web
    - [Atom](https://atom.io/) - A hackable text editor
-   - Git
-   - Composer
-   - Firefox Developer Edition
+   - [Git](https://git-scm.com/) - for Versioning Control
+   - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - Built for those who build the Web
 2. Front-end
    - [NodeJS](https://nodejs.org)
    - [npm](https://www.npmjs.com/) - npm is the package manager for JavaScript
    - [Bower](https://bower.io/) - A package manager for the web
+   - [Git](https://git-scm.com/) - for Versioning Control
+   - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - Built for those who build the Web
 3. Back-end
+   - [Apache2](https://httpd.apache.org/) - Webserver
+   - [MongoDB](https://www.mongodb.com/)
 4. Mobile
    - [Android Studio](https://developer.android.com/studio/index.html) - The Official IDE for Android
    - [SQLite Database Browser](http://sqlitebrowser.org/) - The Official home of the DB Browser for SQLite
 5. Student
    - [Code::Block](http://www.codeblocks.org/) - Code::Blocks is a free C, C++ and Fortran IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.
-   - NetBeans
-   - Libre Office
-6. Ada ide lain ?
+   - [NetBeans](http://netbeans.org/)
+   - gcc & g++
+   - [Libre Office](https://www.libreoffice.org/)
+6. Design
+   - [InkScape](https://inkscape.org/) - for Draw vector freely
+   - [GIMP](https://www.gimp.org/) - The Free & Open Source Image Editor
+   - [Blender](https://www.blender.org/) - Open Source 3D creation. Free to use for any purpose, forever.
+   - [Synfig](http://www.synfig.org/) - Open-source 2D animation software
+7. Ada ide lain ?
 
 ## Latar belakang proyek ini dibuat :
 Proyek ini meneruskan [Tea Module Installer](https://github.com/tealinuxos/tea-module-installer). Karena aplikasi installer tersebut hanya dapat berjalan di TeaLinuxOS, kami ingin installer ini bisa jalan di lintas distro Linux, sehingga lebih banyak _developer_ yang merasakan manfaatnya :).
@@ -55,3 +65,7 @@ Proyek ini juga terinspirasi dari [Laptop Script](https://github.com/thoughtbot/
     Cara cukup dengan membuat _issue_ pada repository ini / klik [tautan ini](https://github.com/tealinuxos/modularitea/issues/new) untuk jalan pintas.
 * Berkontribusi di Kode
 * Bantu buat dokumentasi yang lebih baik
+
+## Lain-lain :
+* Untuk pengguna yang masih bingung memilih _bundle_, bisa di refrensikan ke situs ini : [What is the best programming language for me?](http://www.bestprogramminglanguagefor.me)
+* Setelah selesai memasang _bundle_ lalu di beri tutorial singkat ? di awali dengan memberi _overview_ tentang _tech stack_ yang dipilih.  
