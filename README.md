@@ -1,7 +1,7 @@
 # Modularitea
 Modularitea merupakan aplikasi yang dapat memasang lingkungan kerja untuk para pengembang hanya dengan beberapa langkah sederhana. Modularitea menyederhanakan proses cari, unduh, pasang dan ubahsuai  ke dalam bentuk [modul](#modul).
 
-Sebelumnya, Developer [TeaLinuxOS](http://tealinuxos.org) telah membuat nutrisi berbentuk [Tea Module Installer](https://github.com/tealinuxos/tea-module-installer). Namun, Tea Module Installer hanya dapat berjalan di TeaLinuxOS. Modularitea dibuat agar Tea Module Installer dapat berjalan lintas distro Linux. Modularitea juga terinspirasi dari script [laptop](https://thoughtbot.com/tools) buatan [Thoughtbot](https://thoughtbot.com/), script tersebut dapat secara otomatis memasang lingkungan kerja pengembang Web di platform Mac. 
+Sebelumnya, Developer [TeaLinuxOS](http://tealinuxos.org) telah membuat nutrisi berbentuk [Tea Module Installer](https://github.com/tealinuxos/tea-module-installer). Namun, Tea Module Installer hanya dapat berjalan di TeaLinuxOS. Modularitea dibuat agar Tea Module Installer dapat berjalan lintas distro Linux. Modularitea juga terinspirasi dari script [laptop](https://thoughtbot.com/tools) buatan [Thoughtbot](https://thoughtbot.com/), script tersebut dapat secara otomatis memasang lingkungan kerja pengembang Web di platform Mac.
 
 ## Konsep Modularitea
 
@@ -43,6 +43,7 @@ Tipe pengembang ini akan berhubungan dengan server dan database web.
 Tipe pengembang ini akan berhubungan dengan pengembangan aplikasi mobile Android.
 - [Android Studio](https://developer.android.com/studio/index.html) - The Official IDE for Android
 - [SQLite Database Browser](http://sqlitebrowser.org/) - The Official home of the DB Browser for SQLite
+- [Git](https://git-scm.com/) - for Versioning Control
 
 #### 5. User Interface Designer (UID)
 Tipe pengembang ini akan berhubungan dengan desain antarmuka, baik web, mobile maupun destop.
@@ -56,6 +57,8 @@ Tipe pengembang ini akan berhubungan dengan desain antarmuka, baik web, mobile m
 - [Code::Block](http://www.codeblocks.org/) - C, C++ and Fortran IDE built to meet the most demanding needs of its users.
 - [NetBeans](http://netbeans.org/)
 - gcc & g++ Compiler
+- [OpenCV](http://opencv.org) - a library of programming functions mainly aimed at real-time computer vision.
+- [Git](https://git-scm.com/) - for Versioning Control
 
 Masih terasa hambar? Tambahkan versimu di [sini](https://github.com/tealinuxos/modularitea/issues/new)
 
