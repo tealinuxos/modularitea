@@ -37,7 +37,15 @@ Tipe pengembang ini akan berhubungan dengan antarmuka tampilan web.
 #### 3. Back-end Web Developer (BeWD)
 Tipe pengembang ini akan berhubungan dengan server dan database web.
 - [Apache2](https://httpd.apache.org/) - Webserver
+- [PHP 7](http://php.net)
+- [Composer](https://getcomposer.org/) -  Dependency Manager for PHP
+- [MySql](https://www.mysql.com/)
+- [PHPMyAdmin](https://www.phpmyadmin.net/) - Bringing MySQL to the web
+- [Git](https://git-scm.com/) - for Versioning Control
 - [MongoDB](https://www.mongodb.com/)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - Built for those who build the Web
+- [NodeJS](https://nodejs.org)
+- [Npm](https://www.npmjs.com/) - npm is the package manager for JavaScript
 
 #### 4. Mobile Android Developer (MAD)
 Tipe pengembang ini akan berhubungan dengan pengembangan aplikasi mobile Android.
@@ -66,7 +74,8 @@ Masih terasa hambar? Tambahkan versimu di [sini](https://github.com/tealinuxos/m
 Status proyek modularitea saat ini masih dalam pengembangan, kamu dapat berkontribusi apapun. Baik itu ide, dokumentasi, desain ataupun kode. [Buat issue untuk memulai kontribusi](https://github.com/tealinuxos/modularitea/issues/new) .
 
 # Lainnya
-[Best Programming Language to Learn](http://www.bestprogramminglanguagefor.me)
+- [Best Programming Language to Learn](http://www.bestprogramminglanguagefor.me)
+- [Which Programming Language Should I Learn?](http://choosing-a-language.techboss.co/)
 
 # Lisensi
 [MIT](http://opensource.org/licenses/MIT)
