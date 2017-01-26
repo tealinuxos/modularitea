@@ -74,6 +74,9 @@ Masih terasa hambar? Tambahkan versimu di [sini](https://github.com/tealinuxos/m
 Status proyek modularitea saat ini masih dalam pengembangan, kamu dapat berkontribusi apapun. Baik itu ide, dokumentasi, desain ataupun kode. [Buat issue untuk memulai kontribusi](https://github.com/tealinuxos/modularitea/issues/new) .
 
 # Lainnya
+
+Masih bingung ingin belajar atau menggunakan bahasa pemprograman apa ?
+
 - [Best Programming Language to Learn](http://www.bestprogramminglanguagefor.me)
 - [Which Programming Language Should I Learn?](http://choosing-a-language.techboss.co/)
 
