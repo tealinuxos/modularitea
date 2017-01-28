@@ -42,7 +42,7 @@ Tipe pengembang ini akan berhubungan dengan server dan database web.
 - [MySql](https://www.mysql.com/) - a database system used on the web
 - [PHPMyAdmin](https://www.phpmyadmin.net/) - Bringing MySQL to the web
 - [Git](https://git-scm.com/) - for Versioning Control
-- [MongoDB](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/) - an open-source document database and leading NoSQL database
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - Built for those who build the Web
 - [NodeJS](https://nodejs.org) -  is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications
 - [Npm](https://www.npmjs.com/) - npm is the package manager for JavaScript
