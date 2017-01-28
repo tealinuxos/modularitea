@@ -18,9 +18,9 @@ Di dunia terdapat berbagai macam tipe pengembang, Modularitea ada untuk menyedia
 Tipe pengembang ini akan berhubungan dengan aplikasi web dari awal hingga akhir.
 Modul ini mengandung:
 - [Apache2](https://httpd.apache.org/) - Webserver
-- [PHP 7](http://php.net)
+- [PHP 7](http://php.net) - a server scripting language
 - [Composer](https://getcomposer.org/) -  Dependency Manager for PHP
-- [MySql](https://www.mysql.com/)
+- [MySql](https://www.mysql.com/) - a database system used on the web
 - [PHPMyAdmin](https://www.phpmyadmin.net/) - Bringing MySQL to the web
 - [Atom](https://atom.io/) - A hackable text editor
 - [Git](https://git-scm.com/) - for Versioning Control
@@ -28,7 +28,7 @@ Modul ini mengandung:
 
 #### 2. Front-end Web Developer (FeWD)
 Tipe pengembang ini akan berhubungan dengan antarmuka tampilan web.
-- [NodeJS](https://nodejs.org)
+- [NodeJS](https://nodejs.org) -  is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications
 - [Npm](https://www.npmjs.com/) - npm is the package manager for JavaScript
 - [Bower](https://bower.io/) - A package manager for the web
 - [Git](https://git-scm.com/) - for Versioning Control
@@ -37,14 +37,14 @@ Tipe pengembang ini akan berhubungan dengan antarmuka tampilan web.
 #### 3. Back-end Web Developer (BeWD)
 Tipe pengembang ini akan berhubungan dengan server dan database web.
 - [Apache2](https://httpd.apache.org/) - Webserver
-- [PHP 7](http://php.net)
+- [PHP 7](http://php.net) - a server scripting language
 - [Composer](https://getcomposer.org/) -  Dependency Manager for PHP
-- [MySql](https://www.mysql.com/)
+- [MySql](https://www.mysql.com/) - a database system used on the web
 - [PHPMyAdmin](https://www.phpmyadmin.net/) - Bringing MySQL to the web
 - [Git](https://git-scm.com/) - for Versioning Control
 - [MongoDB](https://www.mongodb.com/)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - Built for those who build the Web
-- [NodeJS](https://nodejs.org)
+- [NodeJS](https://nodejs.org) -  is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications
 - [Npm](https://www.npmjs.com/) - npm is the package manager for JavaScript
 
 #### 4. Mobile Android Developer (MAD)
