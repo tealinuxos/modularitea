@@ -60,6 +60,7 @@ Tipe pengembang ini akan berhubungan dengan desain antarmuka, baik web, mobile m
 - [Gimp](https://www.gimp.org/) - The Free & Open Source Image Editor
 - [Blender](https://www.blender.org/) - Open Source 3D creation. Free to use for any purpose, forever.
 - [Synfig](http://www.synfig.org/) - Open-source 2D animation software
+- [Darktable](http://www.darktable.org/) - an open source photography workflow application and raw developer
 
 #### 6. Student
 - [Code::Block](http://www.codeblocks.org/) - C, C++ and Fortran IDE built to meet the most demanding needs of its users.
