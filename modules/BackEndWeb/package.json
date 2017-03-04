@@ -1,0 +1,18 @@
+{
+    "package": {
+        "name"          : "Back-end Web Developer",
+        "description"   : "",
+        "atoms"         : [
+            "apache2",
+            "php7",
+            "composer",
+            "mysql",
+            "phpmyadmin",
+            "atom",
+            "mongodb",
+            "nodejs",
+            "firefoxdev",
+            "git"
+        ]
+    }
+}
