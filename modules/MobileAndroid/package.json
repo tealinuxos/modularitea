@@ -1,0 +1,11 @@
+{
+    "package": {
+        "name"          : "Mobile Android Developer",
+        "description"   : "",
+        "atoms"         : [
+            "androidstudio",
+            "sqlitebrowser",
+            "git"
+        ]
+    }
+}

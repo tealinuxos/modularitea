@@ -1,0 +1,16 @@
+{
+    "package": {
+        "name"          : "Full-stack Web Developer",
+        "description"   : "",
+        "atoms"         : [
+            "apache2",
+            "php7",
+            "composer",
+            "mysql",
+            "phpmyadmin",
+            "atom",
+            "firefoxdev",
+            "git"
+        ]
+    }
+}

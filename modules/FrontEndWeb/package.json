@@ -1,0 +1,14 @@
+{
+    "package": {
+        "name"          : "Front-end Web Developer",
+        "description"   : "",
+        "atoms"         : [
+            "nodejs",
+            "npm",
+            "bower",
+            "atom",
+            "firefoxdev",
+            "git"
+        ]
+    }
+}

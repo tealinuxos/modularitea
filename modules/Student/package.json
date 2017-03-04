@@ -1,0 +1,14 @@
+{
+    "package": {
+        "name"          : "Student",
+        "description"   : "",
+        "atoms"         : [
+            "codeblocks",
+            "netbeans",
+            "gcc",
+            "gplusplus",
+            "opencv",
+            "git"
+        ]
+    }
+}

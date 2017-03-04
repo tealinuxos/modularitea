@@ -1,0 +1,14 @@
+{
+    "package": {
+        "name"          : "User Interface Designer",
+        "description"   : "",
+        "atoms"         : [
+            "codeblocks",
+            "netbeans",
+            "gcc",
+            "gplusplus",
+            "opencv",
+            "git"
+        ]
+    }
+}
