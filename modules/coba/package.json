@@ -1,0 +1,11 @@
+{
+    "package": {
+        "name"          : "Student",
+        "description"   : "",
+        "atoms"         : [
+            "php7",
+            "firefoxdev",
+            "androidstudio"
+        ]
+    }
+}

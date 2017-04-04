@@ -8,6 +8,6 @@
                 "name"  : "php7.0"
             }
         },
-        "prefered_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt"
     }
 }
