@@ -102,7 +102,7 @@ class FetchProgressAdapter(AcquireProgress):
 
     def start(self):
         super(FetchProgressAdapter, self).start()
-        self.action.set_markup("<i>Downloading additional package files...</i>")
+        self.action.set_markup("<i>Updating software list...</i>")
         self.progress.set_fraction(0)
 
     def stop(self):

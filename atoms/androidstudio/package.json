@@ -4,7 +4,7 @@
         "description"   : "Android Studio provides the fastest tools for building apps on every type of Android device.",
         "homepage"      : "https://developer.android.com/studio/index.html",
         "source": {
-            "http_download": {
+            "http_archive": {
                 "any": {
                     "url_type"      : "parse_html",
                     "url"           : "https://developer.android.com/studio/index.html",
@@ -13,6 +13,6 @@
                 }
             }
         },
-        "preferred_source": "http_download"
+        "preferred_source": "http_archive"
     }
 }
