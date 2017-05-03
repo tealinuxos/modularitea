@@ -1,0 +1,17 @@
+{
+  "name": "modularitea",
+  "version": "0.0.0",
+  "homepage": "http://tealinuxos.org",
+  "description": "Modularitea merupakan aplikasi yang dapat memasang lingkungan kerja untuk para pengembang hanya dengan beberapa langkah sederhana. Modularitea menyederhanakan proses cari, unduh, pasang dan ubahsuai ke dalam bentuk modul. ",
+  "main": "./dist/main.js",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "vue": "^2.1.10",
+    "vue-electron": "^1.0.6",
+    "vue-resource": "^1.0.3",
+    "vue-router": "^2.1.2",
+    "vuex": "^2.1.1"
+  },
+  "devDependencies": {},
+  "author": "Diky Arga <dikyarga.id@gmail.com>"
+}
