@@ -1,6 +1,7 @@
 {
   "name": "modularitea",
   "version": "0.0.0",
+  "homepage": "http://tealinuxos.org",
   "description": "Modularitea merupakan aplikasi yang dapat memasang lingkungan kerja untuk para pengembang hanya dengan beberapa langkah sederhana. Modularitea menyederhanakan proses cari, unduh, pasang dan ubahsuai ke dalam bentuk modul. ",
   "main": "./dist/main.js",
   "dependencies": {
