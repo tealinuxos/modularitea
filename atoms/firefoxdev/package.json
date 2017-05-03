@@ -27,6 +27,6 @@
                 }
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "http_archive"
     }
 }
