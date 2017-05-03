@@ -68,6 +68,7 @@ Tipe pengembang ini akan berhubungan dengan desain antarmuka, baik web, mobile m
 - gcc & g++ Compiler
 - [OpenCV](http://opencv.org) - a library of programming functions mainly aimed at real-time computer vision.
 - [Git](https://git-scm.com/) - for Versioning Control
+- [GNU Octave](https://www.gnu.org/software/octave/) - Powerful mathematics-oriented syntax with built-in plotting and visualization tools
 
 Masih terasa hambar? Tambahkan versimu di [sini](https://github.com/tealinuxos/modularitea/issues/new)
 
