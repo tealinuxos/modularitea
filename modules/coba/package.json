@@ -1,0 +1,10 @@
+{
+    "package": {
+        "name"          : "Student",
+        "description"   : "",
+        "atoms"         : [
+            "firefoxdev",
+            "tea-package"
+        ]
+    }
+}
