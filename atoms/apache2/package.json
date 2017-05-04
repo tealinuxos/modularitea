@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Apache 2",
+        "description"   : "Webserver",
+        "homepage"      : "https://httpd.apache.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "apache2"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

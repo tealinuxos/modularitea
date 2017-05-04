@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "phpMyAdmin",
+        "description"   : "Bringing MySQL to the web",
+        "homepage"      : "https://www.phpmyadmin.net/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "phpmyadmin"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

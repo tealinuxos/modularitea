@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Git",
+        "description"   : "for Versioning Control",
+        "homepage"      : "https://git-scm.com/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "git"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}
