@@ -2,20 +2,19 @@
   <el-row :gutter="20">
     <el-col :span="8" v-for="module in modules">
       <el-card :body-style="{ padding: '0px' }">
-        <p>{{module.package.folderName}}</p>
-        <img :src="getPic(module.package.folderName)">
+        <img :src="getPic(module.package.folderName)" class="image">
         <!-- <img src="../../../../../../modules/Student/icon.png" alt=""> -->
         <!-- <img :src="require('../../../../../../modules/'+  module.package.icon + '/icon.png')" class="image"> -->
         <div style="padding: 14px;">
-          <span>{{module.package.name}}</span>
+          <h3>{{module.package.name}}</h3>
           <div class="bottom clearfix">
-            <time class="time">{{module.package.description}}</time>
-            <el-button type="text" class="button">Pilih</el-button>
+            <p>{{module.package.description}}</p>
+            <el-button type="primary" @click.native="gotoModuleDetail(module.package.folderName)">Pilih</el-button>
           </div>
         </div>
       </el-card>
     </el-col>
-    {{ modules }}
+    <!-- {{ modules }} -->
   </el-row>
 
 </template>
@@ -36,7 +35,11 @@
       getPic(folderName) {
         var images = require.context('../../../../../../modules/icons/', false, /\.png$/)
         return images('./' + folderName + '.png')
+      },
+      gotoModuleDetail(folderName) {
+        this.$router.push('/module/' + folderName)
       }
+
     },
     mounted() {
       // get the root folder of electron project
@@ -50,14 +53,28 @@
           throw err;
         }
         files.forEach(file => {
-          // get package.json of the module
-          var modulePackage = JSON.parse(fs.readFileSync(modulesFolderPath + '/' + file + '/package.json', 'utf8'));
-          // add icon path property
-          modulePackage.package.folderName = file
-          modulePackage.package.icon = '../../../../../../modules/Student/icon.png'
-          this.modules.push(modulePackage)
+          // if icons, skip
+          if (file != 'icons') {
+            // get package.json of the module
+            var modulePackage = JSON.parse(fs.readFileSync(modulesFolderPath + '/' + file + '/package.json', 'utf8'));
+            // add icon path property
+            modulePackage.package.folderName = file
+            modulePackage.package.icon = '../../../../../../modules/Student/icon.png'
+            this.modules.push(modulePackage)
+          }
         });
       })
+
+      // try exec
+      var exec = require('child_process').exec;
+      exec('node -v', function(error, stdout, stderr) {
+          console.log('stdout: ' + stdout);
+          console.log('stderr: ' + stderr);
+          if (error !== null) {
+              console.log('exec error: ' + error);
+          }
+      });
+
     },
     data() {
       return {

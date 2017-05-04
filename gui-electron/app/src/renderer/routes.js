@@ -5,6 +5,11 @@ export default [
     component: require('components/Modularitea')
   },
   {
+    path: '/module/:folderName',
+    name: 'module-detail',
+    component: require('components/Modularitea/ModuleDetail')
+  },
+  {
     path: '*',
     redirect: '/'
   }
