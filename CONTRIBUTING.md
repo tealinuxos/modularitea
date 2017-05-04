@@ -16,3 +16,10 @@ $ git clone https://github.com/tealinuxos/modularitea
 $ cd modularitea/gui-electron
 $ npm install
 ```
+
+#### Build
+- into .deb
+
+```
+$ node_modules/.bin/build --linux deb  
+```
