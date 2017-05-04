@@ -26,6 +26,8 @@
 </template>
 <script>
   import fs from 'fs'
+  const shell = require('electron').shell;
+
   export default {
     created () {
       // Set $route values that are not preset during unit testing
@@ -66,7 +68,7 @@
         });
       },
       gotoHomepage(homepageUrl) {
-        console.log('go to : ', homepageUrl);
+        shell.openExternal(homepageUrl)
       }
     },
     mounted() {
