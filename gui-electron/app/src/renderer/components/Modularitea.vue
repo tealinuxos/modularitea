@@ -6,11 +6,12 @@
 
 <script>
   import Home from './Modularitea/Home'
+
   export default {
     components: {
       Home
     },
-    name: 'landing-page'
+    name: 'landing-page',
   }
 </script>
 
