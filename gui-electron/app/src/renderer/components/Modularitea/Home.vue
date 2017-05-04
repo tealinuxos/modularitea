@@ -1,6 +1,6 @@
 <template>
   <el-row :gutter="20">
-    <el-col :span="8" v-for="module in modules">
+    <el-col :span="6" v-for="module in modules">
       <el-card :body-style="{ padding: '0px' }">
         <img :src="getPic(module.package.folderName)" class="image">
         <!-- <img src="../../../../../../modules/Student/icon.png" alt=""> -->
@@ -86,6 +86,12 @@
 </script>
 
 <style scoped>
+  .el-col {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   .time {
     font-size: 13px;
     color: #999;
