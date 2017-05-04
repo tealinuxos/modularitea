@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "NodeJS",
+        "description"   : "is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications",
+        "homepage"      : "https://nodejs.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "mongodb"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

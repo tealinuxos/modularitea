@@ -6,14 +6,15 @@
     <h3>{{ moduleDetail.name }}</h3>
     <p>{{ moduleDetail.description }}</p>
     <el-row>
-      <el-col :span="4" v-for="(o, index) in moduleDetail.atoms" :key="o" :offset="index > 0 ? 2 : 0">
+      <el-col :span="4" v-for="(o, index) in atoms" :key="o" :offset="index > 0 ? 2 : 0">
         <el-card :body-style="{ padding: '0px' }">
           <img src="" class="image">
           <div style="padding: 14px;">
-            <span>{{ moduleDetail.atoms[index]}}</span>
+            <span>{{ atoms[index].name }}</span>
+            <p>{{ atoms[index].description }}</p>
             <div class="bottom clearfix">
               <time class="time"></time>
-              <el-button type="text" class="button">Goto Website</el-button>
+              <el-button type="text" class="button"  @click.native="gotoHomepage(atoms[index].homepage)">Goto Homepage</el-button>
             </div>
           </div>
         </el-card>
@@ -63,7 +64,9 @@
                 console.log('exec error: ' + error);
             }
         });
-
+      },
+      gotoHomepage(homepageUrl) {
+        console.log('go to : ', homepageUrl);
       }
     },
     mounted() {
@@ -72,17 +75,25 @@
       let rootFolderElectron =  process.cwd();
       // goto parrent which is a truly root project
       let rootFolderProject = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
-      const moduleFolderPath = rootFolderProject + '/modules/' + this.$route.params.folderName;
+      let moduleFolderPath = rootFolderProject + '/modules/' + this.$route.params.folderName;
+      let atomsFolderPath = rootFolderProject + '/atoms/'
+
       var modulePackage = JSON.parse(fs.readFileSync(moduleFolderPath + '/package.json', 'utf8'));
       this.moduleDetail = modulePackage.package
       console.log('isi package : ', modulePackage);
       console.log('isi package : ', this.moduleDetail);
+      for (var i = 0; i < modulePackage.package.atoms.length; i++) {
+        var atomDetailPackage = JSON.parse(fs.readFileSync(atomsFolderPath + modulePackage.package.atoms[i] + '/package.json', 'utf8'));
 
+        console.log('-----------------', atomDetailPackage);
+        this.atoms.push(atomDetailPackage.package)
+      }
 
     },
     data() {
       return {
         moduleDetail: {},
+        atoms: []
       }
     }
   }

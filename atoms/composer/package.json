@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Composer",
+        "description"   : "Dependency Manager for PHP",
+        "homepage"      : "https://getcomposer.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "composer"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}
