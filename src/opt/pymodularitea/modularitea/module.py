@@ -131,15 +131,26 @@ class Module:
         c.commit(fetch_progress=fprogress, install_progress=iprogress)
 
     def download_archive(self):
-        from resumable import urlretrieve
+        from resumable import urlretrieve, DownloadError
         for archive in self.http_atoms:
+            file_location = home + ".modularitea/download/" + archive.get_url(ARCH).split('/')[-1]
             print(archive.get_url(ARCH))
-            urlretrieve(
-                archive.get_url(ARCH),
-                # home + ".modularitea/download/" + archive.get_name().replace(" ", ""),
-                home + ".modularitea/download/" + archive.get_url(ARCH).split('/')[-1],
-                self._report_hook
-            )
+            try:
+                urlretrieve(
+                    archive.get_url(ARCH),
+                    # home + ".modularitea/download/" + archive.get_name().replace(" ", ""),
+                    file_location,
+                    self._report_hook
+                )
+            except DownloadError:
+                from urllib import request
+                size = int(request.urlopen(archive.get_url(ARCH)).info()['Content-Length'])
+                size_downloaded = os.path.getsize(file_location)
+                if size_downloaded == size:
+                    pass
+                else:
+                    raise DownloadError
+        print('download done')
 
     def _report_hook(self, bytes_so_far, chunk_size, total_size):
         downloaded = bytes_so_far * chunk_size
@@ -152,11 +163,14 @@ class Module:
     def install_archives(self):
         import subprocess
         for atom in self.http_atoms:
+            file_location = home + ".modularitea/download/" + atom.get_url(ARCH).split('/')[-1]
             p = subprocess.Popen(
                 ["/usr/bin/file-roller",
                  "-e",
                  atom.get_archive_install_dir(),
-                 home + ".modularitea/download" + atom.get_name().replace(" ", "")],
+                 file_location,
+                 "--name", "Modularitea",
+                 "--notify"],
             )
             p.communicate()
 

@@ -147,8 +147,8 @@ class CacheProgressAdapter(OpProgress):
         if percent:
             self.progressbar.set_fraction(percent/100.0)
         #self.progressbar.set_text(self.op)
-        while Gtk.events_pending():
-            Gtk.main_iteration()
+        # while Gtk.events_pending():
+        #     Gtk.main_iteration()
     def done(self):
         self.progressbar.hide()
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3.6
 
 from modularitea.progress_adapter import FetchProgressAdapter
 from modularitea.module import Module
@@ -29,20 +29,14 @@ class Modularitea:
         self.terminal.set_visible(True)
         self.terminal.set_size(60, 20)
         self.expander.add(self.terminal)
+        self.expander.hide()
         self.terminal.set_size_request(300,200)
 
         #connecting signals
         self.cancel_button.connect("clicked", Gtk.main_quit)
         self.window.connect("delete-event", Gtk.main_quit)
 
-        self.module_name = option.module
-        self.module_object = Module(
-            self.module_name,
-            self.progressbar,
-            self.action_label,
-            self.terminal,
-            self.expander
-        )
+
         Gio.io_scheduler_push_job(
             self.download,
             None,
@@ -53,9 +47,17 @@ class Modularitea:
 
 
     def download(self, job, cancellable, user_data):
+        self.module_name = option.module
+        self.module_object = Module(
+            self.module_name,
+            self.progressbar,
+            self.action_label,
+            self.terminal,
+            self.expander
+        )
         self.module_object.download_apt(self.window)
         self.module_object.download_archive()
-        self.expander.set_visible(True)
+        self.expander.show_all()
         self.module_object.install_apt(self.window)
         self.module_object.install_archives()
 
