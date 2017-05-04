@@ -1,6 +1,6 @@
 {
   "name": "modularitea",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Modularitea merupakan aplikasi yang dapat memasang lingkungan kerja untuk para pengembang hanya dengan beberapa langkah sederhana. Modularitea menyederhanakan proses cari, unduh, pasang dan ubahsuai ke dalam bentuk modul. ",
   "scripts": {
     "build": "npm run pack && build",
@@ -12,8 +12,8 @@
     "postinstall": "cd app && npm install"
   },
   "build": {
-    "productName": "ElectronVue",
-    "appId": "org.simulatedgreg.electron-vue",
+    "productName": "Modularitea",
+    "appId": "org.tealinuxos",
     "category": "public.app-category.tools",
     "dmg": {
       "contents": [
@@ -47,7 +47,7 @@
       ]
     }
   },
-  "author": "Greg Holguin <simulatedgreg@gmail.com>",
+  "author": "Diky Arga - Doscom <sekretariat@doscom.org>",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.8.0",
