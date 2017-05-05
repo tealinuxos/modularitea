@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Atom",
+        "description"   : "A hackable text editor",
+        "homepage"      : "https://atom.io/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "atom"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

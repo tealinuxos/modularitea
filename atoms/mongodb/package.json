@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "MongoDB",
+        "description"   : "an open-source document database and leading NoSQL database",
+        "homepage"      : "https://www.mongodb.com/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "mongodb"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

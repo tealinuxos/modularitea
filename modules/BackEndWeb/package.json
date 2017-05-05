@@ -1,7 +1,7 @@
 {
     "package": {
         "name"          : "Back-end Web Developer",
-        "description"   : "",
+        "description"   : "Ini module untuk Back-end web Developer",
         "atoms"         : [
             "apache2",
             "php7",
