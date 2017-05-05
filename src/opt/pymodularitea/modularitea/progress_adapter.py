@@ -68,7 +68,7 @@ class InstallProgressAdapter(InstallProgress):
 
     def finish_update(self):
         self.progress.set_fraction(1)
-        self.action.set_markup("Selesai")
+        # self.action.set_markup("Selesai")
         self.progress.set_text("")
 
     def fork(self):

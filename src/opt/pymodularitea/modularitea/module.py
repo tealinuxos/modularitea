@@ -11,12 +11,13 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Vte, GLib
 import platform
 import apt, apt_pkg
+import time
 
 # PREFIX = "/opt/"
 PREFIX = "/home/mnirfan/Projects/"
 sys.path.append(PREFIX+"modularitea/")
 
-user = 'mnirfan'
+user = os.getenv("SUDO_USER")
 home = "/home/"+user+"/"
 USER_MODULE_DIR = '/home/' + user + '/.modulaitea/modules/'
 print("USER_MODULE_DIR", USER_MODULE_DIR)
@@ -39,6 +40,7 @@ class Module:
     progressbar = None
 
     def __init__(self, module_name, progressbar, action_label, terminal, expander):
+        self.time = None
         self.terminal = terminal
         self.progressbar = progressbar
         self.action_label = action_label
@@ -125,14 +127,26 @@ class Module:
             parent
         )
         c = apt.Cache()
-        self.action_label.set_label("updating software list")
+        self.action_label.set_label("installing..")
         for package in self.apt_atoms:
             c[package.get_apt_package_name()].mark_install()
         c.commit(fetch_progress=fprogress, install_progress=iprogress)
 
     def download_archive(self):
+        from urllib import request
+        # for archive in self.http_atoms:
+        #     self.time = time.time()
+        #     file_location = home + ".modularitea/download/" + archive.get_url(ARCH).split('/')[-1]
+        #     request.urlretrieve(
+        #         archive.get_url(ARCH),
+        #         file_location,
+        #         self._report_hook
+        #     )
+        # print("download done")
+
         from resumable import urlretrieve, DownloadError
         for archive in self.http_atoms:
+            self.time = time.time()
             file_location = home + ".modularitea/download/" + archive.get_url(ARCH).split('/')[-1]
             print(archive.get_url(ARCH))
             try:
@@ -154,11 +168,15 @@ class Module:
 
     def _report_hook(self, bytes_so_far, chunk_size, total_size):
         downloaded = bytes_so_far * chunk_size
-        self.progressbar.set_fraction(downloaded / total_size)
-        self.progressbar.set_text(
-            apt_pkg.size_to_str(self.downloaded + downloaded) + "B of " +
-            apt_pkg.size_to_str(self.download_needed) + "B"
-        )
+        if round(time.time() - self.time) >= 1:
+            self.progressbar.set_fraction(downloaded / total_size)
+            self.progressbar.set_text(
+                apt_pkg.size_to_str(self.downloaded + downloaded) + "B of " +
+                apt_pkg.size_to_str(self.download_needed) + "B"
+            )
+            self.time = time.time()
+        # self.action_label.set_label(apt_pkg.size_to_str(self.downloaded + downloaded) + "B of " +
+        #     apt_pkg.size_to_str(self.download_needed) + "B")
 
     def install_archives(self):
         import subprocess
