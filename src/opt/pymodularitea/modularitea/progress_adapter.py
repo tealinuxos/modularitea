@@ -68,7 +68,7 @@ class InstallProgressAdapter(InstallProgress):
 
     def finish_update(self):
         self.progress.set_fraction(1)
-        self.action.set_markup("Selesai")
+        # self.action.set_markup("Selesai")
         self.progress.set_text("")
 
     def fork(self):
@@ -147,8 +147,8 @@ class CacheProgressAdapter(OpProgress):
         if percent:
             self.progressbar.set_fraction(percent/100.0)
         #self.progressbar.set_text(self.op)
-        while Gtk.events_pending():
-            Gtk.main_iteration()
+        # while Gtk.events_pending():
+        #     Gtk.main_iteration()
     def done(self):
         self.progressbar.hide()
 

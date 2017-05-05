@@ -25,7 +25,6 @@ class Modularitea:
         self.cancel_button = self.ui.get_object('cancel_button')
         self.terminal = Vte.Terminal()
         self.cancellable = Gio.Cancellable()
-        self.spinner = self.ui.get_object('spinner1')
 
         self.terminal.set_visible(True)
         self.terminal.set_size(60, 20)
@@ -36,13 +35,12 @@ class Modularitea:
         #connecting signals
         self.cancel_button.connect("clicked", Gtk.main_quit)
         self.window.connect("delete-event", Gtk.main_quit)
-        self.window.show()
 
 
         Gio.io_scheduler_push_job(
             self.download,
             None,
-            GLib.PRIORITY_LOW,
+            GLib.PRIORITY_DEFAULT,
             None
         )
 
@@ -62,10 +60,8 @@ class Modularitea:
         self.expander.show_all()
         self.module_object.install_apt(self.window)
         self.module_object.install_archives()
-        self.spinner.hide()
-        self.action_label.set_label("Selesai")
-        self.cancel_button.set_label("Close")
 
 
 modularitea = Modularitea()
+modularitea.window.show()
 Gtk.main()
