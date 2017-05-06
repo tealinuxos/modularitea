@@ -78,11 +78,12 @@ class Module:
             os.mkdir("{0}.modularitea".format(home))
             os.mkdir("{0}.modularitea/download".format(home))
         self.downloaded = 0
-        self.download_needed = self.get_download_size()
+        # self.download_needed = self.get_download_size()
 
-    def add_ppas(self):
+    def add_ppas(self, spinner):
         for ppa in self.ppas:
             self.action_label.set_label("Menambahkan " + ppa)
+            print("menambahkan", ppa)
             p = self.terminal.spawn_sync(
                 Vte.PtyFlags.DEFAULT,
                 "~",
@@ -100,10 +101,16 @@ class Module:
                 print(p[1])
         c = apt.Cache()
         self.action_label.set_label("updating software list")
-        c.update()
+        try:
+            c.update()
+        except apt.cache.FetchFailedException as e:
+            spinner.stop()
+            self.action_label.set_label('Error while downloading files. Check your internet connection')
+            return -1111
         self.action_label.set_label("")
+        return 0
 
-    def download_apt(self, parent):
+    def download_apt(self, parent, spinner):
         fprogress = FetchProgressAdapter(
             self.progressbar,
             self.action_label,
@@ -112,7 +119,14 @@ class Module:
         c = apt.Cache()
         for package in self.apt_atoms:
             c[package.get_apt_package_name()].mark_install()
-        c.fetch_archives(fprogress)
+        try:
+            c.fetch_archives(fprogress)
+        except apt.cache.FetchFailedException:
+            spinner.stop()
+            self.action_label.set_label('Error while downloading files. Check your internet connection')
+            self.progressbar.hide()
+            return -1111
+        return 0
 
     def install_apt(self, parent):
         iprogress = InstallProgressAdapter(
@@ -132,7 +146,7 @@ class Module:
             c[package.get_apt_package_name()].mark_install()
         c.commit(fetch_progress=fprogress, install_progress=iprogress)
 
-    def download_archive(self):
+    def download_archive(self, spinner):
         from urllib import request
         # for archive in self.http_atoms:
         #     self.time = time.time()
@@ -145,7 +159,9 @@ class Module:
         # print("download done")
 
         from resumable import urlretrieve, DownloadError
+        import requests
         for archive in self.http_atoms:
+            self.action_label.set_label("Downloading " + archive.get_name())
             self.time = time.time()
             file_location = home + ".modularitea/download/" + archive.get_url(ARCH).split('/')[-1]
             print(archive.get_url(ARCH))
@@ -164,15 +180,20 @@ class Module:
                     pass
                 else:
                     raise DownloadError
+            except requests.exceptions.ConnectionError as e:
+                spinner.stop()
+                self.action_label.set_label('Error while downloading files. Check your internet connection')
+                return -1111
         print('download done')
+        return 0
 
     def _report_hook(self, bytes_so_far, chunk_size, total_size):
         downloaded = bytes_so_far * chunk_size
         if round(time.time() - self.time) >= 1:
             self.progressbar.set_fraction(downloaded / total_size)
             self.progressbar.set_text(
-                apt_pkg.size_to_str(self.downloaded + downloaded) + "B of " +
-                apt_pkg.size_to_str(self.download_needed) + "B"
+                apt_pkg.size_to_str(downloaded) + "B of " +
+                apt_pkg.size_to_str(total_size) + "B"
             )
             self.time = time.time()
         # self.action_label.set_label(apt_pkg.size_to_str(self.downloaded + downloaded) + "B of " +
