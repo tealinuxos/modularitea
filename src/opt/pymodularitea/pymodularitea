@@ -57,14 +57,23 @@ class Modularitea:
             self.terminal,
             self.expander
         )
-        self.module_object.download_apt(self.window)
-        self.module_object.download_archive()
-        self.expander.show_all()
-        self.module_object.install_apt(self.window)
-        self.module_object.install_archives()
-        self.spinner.hide()
-        self.action_label.set_label("Selesai")
-        self.cancel_button.set_label("Close")
+        status = self.module_object.add_ppas(self.spinner)
+        if status == -1111:
+            return False
+        status = self.module_object.download_apt(self.window, self.spinner)
+        if status == -1111:
+            return False
+        status = self.module_object.download_archive(self.spinner)
+        if status != -1111:
+            self.expander.show_all()
+            self.module_object.install_apt(self.window)
+            self.module_object.install_archives()
+            self.spinner.hide()
+            self.action_label.set_label("Selesai")
+            self.cancel_button.set_label("Close")
+        else:
+            self.progressbar.hide()
+            self.cancel_button.set_label("Close")
 
 
 modularitea = Modularitea()
