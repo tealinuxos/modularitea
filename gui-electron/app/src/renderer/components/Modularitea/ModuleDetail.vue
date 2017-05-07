@@ -50,7 +50,7 @@
         // try exec
         let self = this
         var exec = require('child_process').exec;
-        exec('node -v', function(error, stdout, stderr) {
+        exec('gksu "pymodularitea --module=BackEndWeb"', function(error, stdout, stderr) {
             console.log('stdout: ' + stdout);
             self.$alert('This is a message' + stdout, 'Title', {
               confirmButtonText: 'OK',
