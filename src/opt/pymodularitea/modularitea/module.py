@@ -106,6 +106,7 @@ class Module:
         except apt.cache.FetchFailedException as e:
             spinner.stop()
             self.action_label.set_label('Error while downloading files. Check your internet connection')
+            print("Fail di update software list")
             return -1111
         self.action_label.set_label("")
         return 0
@@ -123,6 +124,7 @@ class Module:
             c.fetch_archives(fprogress)
         except apt.cache.FetchFailedException:
             spinner.stop()
+            print("fail di download apt")
             self.action_label.set_label('Error while downloading files. Check your internet connection')
             self.progressbar.hide()
             return -1111
@@ -173,6 +175,7 @@ class Module:
                     self._report_hook
                 )
             except DownloadError:
+                print("fail di download error")
                 from urllib import request
                 size = int(request.urlopen(archive.get_url(ARCH)).info()['Content-Length'])
                 size_downloaded = os.path.getsize(file_location)
@@ -181,6 +184,7 @@ class Module:
                 else:
                     raise DownloadError
             except requests.exceptions.ConnectionError as e:
+                print("fail di ConnectionError")
                 spinner.stop()
                 self.action_label.set_label('Error while downloading files. Check your internet connection')
                 return -1111
