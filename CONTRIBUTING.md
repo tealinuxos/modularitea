@@ -17,6 +17,17 @@ $ cd modularitea/gui-electron
 $ npm install
 ```
 
+#### CLI
+```
+$ cd modularitea-cli/
+$ sudo python setup.py install
+```
+
+#### Run
+```
+$ npm run dev
+```
+
 #### Build
 - into .deb
 
