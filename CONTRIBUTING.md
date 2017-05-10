@@ -23,6 +23,11 @@ $ cd modularitea-cli/
 $ sudo python3 setup.py install
 ```
 
+##### Execute test command
+```
+$ gksu 'x-terminal-emulator -e /usr/local/bin/modularitea-cli --module=nama_module'
+```
+
 #### Run
 ```
 $ npm run dev
