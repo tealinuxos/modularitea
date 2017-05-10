@@ -50,7 +50,7 @@
         // try exec
         let self = this
         var exec = require('child_process').exec;
-        exec('gksu "pymodularitea --module=BackEndWeb"', function(error, stdout, stderr) {
+        exec('pwd', function(error, stdout, stderr) {
             console.log('stdout: ' + stdout);
             self.$alert('This is a message' + stdout, 'Title', {
               confirmButtonText: 'OK',
@@ -65,7 +65,7 @@
             if (error !== null) {
                 console.log('exec error: ' + error);
             }
-        });
+        }).on('exit', code => console.log('final exit code is', code));
       },
       gotoHomepage(homepageUrl) {
         shell.openExternal(homepageUrl)
