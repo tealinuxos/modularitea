@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import urllib
 from modularitea import module
 from optparse import OptionParser
 import apt_pkg
@@ -16,16 +17,20 @@ try:
     module_name = option.module
     module_object = module.Module(module_name)
 
+    print("memeriksa koneksi...")
+    module_object.add_ppas()
     total_size = module_object.get_download_size()
-    print("Diperlukan download sebesar", apt_pkg.size_to_str(total_size) + "B (perkiraan)")
+    print("\n\nDiperlukan download sebesar", apt_pkg.size_to_str(total_size) + "B (perkiraan)")
     print("** Download dapat dilanjutkan lain waktu **")
     user_input = input("Ingin melanjutkan? [Y/n]: ")
     if user_input == "y" or user_input == "Y" or user_input == "":
-
         module_object.download_archive()
-        module_object.add_ppas()
-        module_object.download_apt()
         module_object.install_apt()
         module_object.install_archives()
+        exit(0)
 except KeyboardInterrupt:
+    print("\nkeyboard interrupt")
     exit(-1)
+except urllib.error.URLError:
+    print("\n[\033[0;31m*\033[0m] Tidak dapat mengunduh paket dari server. Periksa koneksi internetmu.")
+    exit(-2)

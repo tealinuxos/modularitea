@@ -35,6 +35,21 @@ class Module:
     ppas = []
     http_atoms = []
     progressbar = None
+    current_anim = 1
+
+    def get_busy_anim(self):
+        if self.current_anim == 1:
+            self.current_anim += 1
+            return "[\033[0;32m*\033[0m   ]"
+        elif self.current_anim == 2:
+            self.current_anim += 1
+            return "[ \033[0;32m*\033[0m  ]"
+        elif self.current_anim == 3:
+            self.current_anim += 1
+            return "[  \033[0;32m*\033[0m ]"
+        elif self.current_anim == 4:
+            self.current_anim = 1
+            return "[   \033[0;32m*\033[0m]"
 
     def __init__(self, module_name):
         if os.path.exists(USER_MODULE_DIR + module_name):
@@ -85,8 +100,8 @@ class Module:
                 stderr=subprocess.STDOUT
             )
             # http://stackoverflow.com/questions/1606795/catching-stdout-in-realtime-from-subprocess
-            for line in iter(p.stdout.readline, b''):
-                print(str(line, 'utf-8').rstrip())
+            for line in iter(p.stdout.read, b''):
+                print(str(line, 'utf-8').rstrip(), end="")
         print(ACTION_INFO, "updating software list")
         p = subprocess.Popen(
             ["/usr/bin/apt", "update"],
@@ -111,17 +126,19 @@ class Module:
 
 
     def install_apt(self):
-        apt_packages = []
+        apt_packages = ["apt","install", "-y"]
         for package in self.apt_atoms:
             apt_packages.append(package.get_apt_package_name())
         print(ACTION_INFO, "downloading apt packages")
-        p = subprocess.Popen(
-            ["/usr/bin/apt", "install"] + apt_packages,
-            stderr=subprocess.PIPE,
-            stdout=subprocess.PIPE
-        )
-        for line in iter(p.stdout.readline, b''):
-            print(str(line, 'utf-8').rstrip())
+        print(apt_packages)
+        os.execv("/usr/bin/apt", apt_packages)
+        # p = subprocess.Popen(
+        #     ["/usr/bin/apt", "install", "-y"] + apt_packages,
+        #     stderr=subprocess.PIPE,
+        #     stdout=subprocess.PIPE
+        # )
+        # for line in iter(p.stdout.readline, b''):
+        #     print(str(line, 'utf-8').rstrip())
 
     def download_archive(self):
         from urllib import request
@@ -168,10 +185,11 @@ class Module:
 
     def _report_hook(self, bytes_so_far, chunk_size, total_size):
         downloaded = bytes_so_far * chunk_size
-        prefix =apt_pkg.size_to_str(downloaded) + "B"
+        prefix = "  " + apt_pkg.size_to_str(downloaded) + "B"
         printProgressBar(downloaded,
                          total_size,
-                         prefix=prefix)
+                         prefix=prefix,
+                         suffix=self.get_busy_anim())
 
     def install_archives(self):
         for atom in self.http_atoms:
@@ -189,7 +207,7 @@ class Module:
         for package in self.http_atoms:
             r = request.urlopen(package.get_url(ARCH))
             total_size += int(r.info()['Content-Length'])
-            print(package.get_name(),int(r.info()['Content-Length']))
+            # print(package.get_name(),int(r.info()['Content-Length']))
         import apt
         c = apt.Cache()
         for package in self.apt_atoms:
