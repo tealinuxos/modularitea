@@ -65,8 +65,7 @@ class Module:
             # print("module", module_name, "found in sys dir")
         else:
             print(ACTION_ERROR, 'Module', module_name, "doesn't exist")
-            input()
-            exit(-1)
+            exit(1)
 
         for atom in self.module['package']['atoms']:
             atom_temp = Atom(atom)
@@ -80,8 +79,7 @@ class Module:
                 self.http_atoms.append(atom_temp)
             else:
                 print(ACTION_ERROR, "invalid atom", atom.get_name())
-                input()
-                exit(-1)
+                exit(1)
                 # raise AttributeError
 
         # print('APT      :', self.apt_atoms)
@@ -129,7 +127,7 @@ class Module:
 
 
     def install_apt(self):
-        apt_packages = ["apt","install", "-y"]
+        apt_packages = ["apt","install", "-y", "--allow-unauthenticated"]
         for package in self.apt_atoms:
             apt_packages.append(package.get_apt_package_name())
         print(ACTION_INFO, "downloading apt packages")
@@ -182,7 +180,7 @@ class Module:
                 # todo: hapus debug
                 # print("fail di ConnectionError")
                 print(ACTION_ERROR, 'Error while downloading files. Check your internet connection')
-                exit(-1)
+                exit(1)
         print(ACTION_INFO, 'download done')
         return 0
 
@@ -201,9 +199,9 @@ class Module:
             file_location = home + ".modularitea/download/" + atom.get_url(ARCH).split('/')[-1]
             command = []
             if file_location.endswith(".tar.gz") or file_location.endswith(".tar.xz"):
-                command = ["/bin/tar", "-xvzf", file_location, "-C", atom.get_archive_install_dir()]
+                command = ["/bin/tar", "-xvzf", file_location, "-C", atom.get_archive_install_dir(ARCH)]
             elif file_location.endswith(".zip"):
-                command = ["/usr/bin/unzip", file_location, "-d", atom.get_archive_install_dir()]
+                command = ["/usr/bin/unzip", file_location, "-d", atom.get_archive_install_dir(ARCH)]
             p = subprocess.call(command)
             if atom.get_custom_desktop_entry():
                 shutil.copyfile(
