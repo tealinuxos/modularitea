@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "GNU Octave",
+        "description"   : "Powerful mathematics-oriented syntax with built-in plotting and visualization tools",
+        "homepage"      : "https://www.gnu.org/software/octave/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "octave"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

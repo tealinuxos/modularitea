@@ -3,12 +3,12 @@
         "name"          : "User Interface Designer",
         "description"   : "",
         "atoms"         : [
-            "codeblocks",
-            "netbeans",
-            "gcc",
-            "g++",
-            "opencv",
-            "git"
+            "inkscape",
+            "pencil",
+            "gimp",
+            "blender",
+            "synfig",
+            "darktable"
         ]
     }
 }
