@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Pencil",
+        "description"   : "Pencil is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.",
+        "homepage"      : "http://pencil.evolus.vn/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "pencil"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

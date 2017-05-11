@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Inkscape",
+        "description"   : "Inkscape is a free and open-source vector graphics editor",
+        "homepage"      : "http://inkscape.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "inkscape"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

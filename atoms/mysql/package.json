@@ -2,7 +2,7 @@
     "package": {
         "name"          : "MySql",
         "description"   : "a database system used on the web",
-        "homepage"      : "https://www.mysql.com/",
+        "homepage"      : "https://mysql.com/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "mysql"

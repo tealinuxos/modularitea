@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "GCC",
+        "description"   : "C compiler by GNU",
+        "homepage"      : "https://gcc.gnu.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "gcc"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}
