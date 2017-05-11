@@ -51,32 +51,42 @@
         let self = this
         var exec = require('child_process').exec;
         let command = "x-terminal-emulator -e /usr/local/bin/modularitea-cli --module=" + this.$route.params.folderName
+        let errorMessage = ''
         exec('gksu "' + command + '"', function(error, stdout, stderr) {
             console.log('stdout: ' + stdout);
 
             console.log('stderr: ' + stderr);
             if (error !== null) {
+              self.$alert('Instalasi module ' + self.$route.params.folderName + ' gagal, karena : ' + error, 'Gagal install modul ):', {
+                confirmButtonText: 'OK',
+                callback: action => {
+                  self.$message({
+                    type: 'error',
+                    message: `Jika belum terselesaikan masalahnya, silahkan hubungi developer TeaLinuxOS di tealinuxos.org (:`
+                    });
+                  }
+                })
                 console.log('exec error: ' + error);
             }
         }).on('exit', code => {
           let message = ''
-          switch (code) {
-            case 0:
+          switch (true) {
+            case (code == 0):
               message = 'Selamat kamu berhasil memesang modul ' + this.$route.params.folderName
+              self.$alert(message, 'Sukses install modul!', {
+                confirmButtonText: 'OK',
+                callback: action => {
+                  self.$message({
+                    type: 'success',
+                    message: `Selamat menikmati racikan kami (:`
+                    });
+                  }
+                })
               break;
             default:
 
           }
 
-          self.$alert(message, 'Sukses', {
-            confirmButtonText: 'OK',
-            callback: action => {
-              self.$message({
-                type: 'success',
-                message: `action: ${ action }`
-              });
-            }
-          })
         });
       },
       gotoHomepage(homepageUrl) {
