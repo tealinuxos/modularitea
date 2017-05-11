@@ -6,9 +6,7 @@
         "source": {
             "http_archive": {
                 "any": {
-                    "url_type"      : "parse_html",
-                    "url"           : "https://developer.android.com/studio/index.html",
-                    "file_type"     : "zip",
+                    "url"           : "http://studio.tealinuxos.org/module/android-studio/android-studio.zip",
                     "destination"   : "/opt"
                 }
             }

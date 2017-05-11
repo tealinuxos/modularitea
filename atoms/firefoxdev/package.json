@@ -7,26 +7,8 @@
             "ubuntu_apt": {
                 "name"  : "firefox",
                 "ppa"   : "ppa:ubuntu-mozilla-daily/firefox-aurora"
-            },
-            "http_archive": {
-                "32bit": {
-                    "url_type"      : "direct",
-                    "url"           : "https://download.mozilla.org/?product=firefox-aurora-latest-ssl&os=linux&lang=en-US",
-                    "file_type"     : "tar.bz2",
-                    "destination"   : "/opt",
-                    "postinstall_script"        : true,
-                    "custom_desktop_shortcut"   : true
-                },
-                "64bit": {
-                    "url_type"      : "direct",
-                    "url"           : "https://download.mozilla.org/?product=firefox-aurora-latest-ssl&os=linux64&lang=en-US",
-                    "file_type"     : "tar.bz2",
-                    "destination"   : "/opt",
-                    "postinstall_script"        : true,
-                    "custom_desktop_shortcut"   : true
-                }
             }
         },
-        "preferred_source"   : "http_archive"
+        "preferred_source"   : "ubuntu_apt"
     }
 }

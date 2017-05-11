@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "SQLite Browser",
+        "description"   : "Database Browser for SQLite",
+        "homepage"      : "http://sqlitebrowser.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "sqlitebrowser"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

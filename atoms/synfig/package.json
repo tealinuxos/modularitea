@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Synfig",
+        "description"   : "Synfig Studio is a free and open source 2D vector graphics and timeline-based computer animation program.",
+        "homepage"      : "http://synfig.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "synfig"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

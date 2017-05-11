@@ -1,13 +1,20 @@
 {
     "package": {
-        "name"          : "NodeJS",
-        "description"   : "is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications",
+        "name"          : "NodeJS + npm",
+        "description"   : "is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications. npm is the most popular package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js.",
         "homepage"      : "https://nodejs.org/",
         "source": {
-            "ubuntu_apt": {
-                "name"  : "mongodb"
+            "http_archive": {
+                "32bit"  : {
+                    "url"           : "http://studio.tealinuxos.org/module/nodejs/node-v6.10.3-linux-x86.tar.xz",
+                    "destination"   : "/"
+                },
+                "64bit"  : {
+                    "url"           : "http://studio.tealinuxos.org/module/nodejs/node-v6.10.3-linux-x64.tar.xz",
+                    "destination"   : "/"
+                }
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "http_archive"
     }
 }

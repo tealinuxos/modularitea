@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Code::Blocks",
+        "description"   : " C, C++ and Fortran IDE built to meet the most demanding needs of its users.",
+        "homepage"      : "http://www.codeblocks.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "codeblocks"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}
