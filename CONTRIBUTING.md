@@ -17,6 +17,22 @@ $ cd modularitea/gui-electron
 $ npm install
 ```
 
+#### CLI
+```
+$ cd modularitea-cli/
+$ sudo python3 setup.py install
+```
+
+##### Execute test command
+```
+$ gksu 'x-terminal-emulator -e /usr/local/bin/modularitea-cli --module=nama_module'
+```
+
+#### Run
+```
+$ npm run dev
+```
+
 #### Build
 - into .deb
 

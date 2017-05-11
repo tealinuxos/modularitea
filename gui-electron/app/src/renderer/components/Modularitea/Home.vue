@@ -53,13 +53,14 @@
           throw err;
         }
         files.forEach(file => {
+          console.log('nama folder nya apa aja  ', file);
           // if icons, skip
           if (file != 'icons') {
             // get package.json of the module
             var modulePackage = JSON.parse(fs.readFileSync(modulesFolderPath + '/' + file + '/package.json', 'utf8'));
             // add icon path property
             modulePackage.package.folderName = file
-            modulePackage.package.icon = '../../../../../../modules/Student/icon.png'
+            // modulePackage.package.icon = '../../../../../../modules/Student/icon.png'
             this.modules.push(modulePackage)
           }
         });
