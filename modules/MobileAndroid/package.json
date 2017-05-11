@@ -3,7 +3,7 @@
         "name"          : "Mobile Android Developer",
         "description"   : "",
         "atoms"         : [
-            "androidstudio",
+            "android-studio",
             "sqlitebrowser",
             "git"
         ]

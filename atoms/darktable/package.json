@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Darktable",
+        "description"   : "An open source photography workflow application and raw developer",
+        "homepage"      : "http://www.darktable.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "darktable"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}
