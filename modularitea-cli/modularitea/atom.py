@@ -35,7 +35,7 @@ class Atom:
                 self.object = json.load(data)
         else:
             print("Atom \"" + package + "\" doesn't exist")
-            exit(-1)
+            exit(1)
 
         # default sumber pemasangan atom
         self.preferred_source = self.object['package']['preferred_source']

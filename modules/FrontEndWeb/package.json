@@ -4,8 +4,6 @@
         "description"   : "",
         "atoms"         : [
             "nodejs",
-            "npm",
-            "bower",
             "atom",
             "firefoxdev",
             "git"

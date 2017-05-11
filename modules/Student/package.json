@@ -6,7 +6,7 @@
             "codeblocks",
             "netbeans",
             "gcc",
-            "gplusplus",
+            "g++",
             "opencv",
             "git"
         ]

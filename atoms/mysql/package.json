@@ -5,7 +5,7 @@
         "homepage"      : "https://mysql.com/",
         "source": {
             "ubuntu_apt": {
-                "name"  : "mysql"
+                "name"  : "mysql-client-core-5.7"
             }
         },
         "preferred_source"   : "ubuntu_apt"
