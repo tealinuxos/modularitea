@@ -33,7 +33,7 @@
     },
     methods: {
       getPic(folderName) {
-        var images = require.context('../../../../../../modules/icons/', false, /\.png$/)
+        var images = require.context('../../../../../../icons/', false, /\.png$/)
         return images('./' + folderName + '.png')
       },
       gotoModuleDetail(folderName) {
