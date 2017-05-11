@@ -5,7 +5,8 @@
         "homepage"      : "https://atom.io/",
         "source": {
             "ubuntu_apt": {
-                "name"  : "atom"
+                "name"  : "atom",
+                "ppa"   : "ppa:webupd8team/atom"
             }
         },
         "preferred_source"   : "ubuntu_apt"

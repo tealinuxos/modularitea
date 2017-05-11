@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "OpenCV for python",
+        "description"   : "OpenCV is a library of programming functions mainly aimed at real-time computer vision",
+        "homepage"      : "http://opencv.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "python-opencv"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

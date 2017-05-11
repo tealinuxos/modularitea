@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "Blender",
+        "description"   : "Open Source 3D creation. Free to use for any purpose, forever.",
+        "homepage"      : "https://www.blender.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "blender"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "package": {
+        "name"          : "GIMP",
+        "description"   : "The Free & Open Source Image Editor",
+        "homepage"      : "http://gimp.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "gimp"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt"
+    }
+}

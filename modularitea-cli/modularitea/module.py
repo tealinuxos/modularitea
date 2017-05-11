@@ -4,6 +4,9 @@ import os
 import sys
 import json
 import subprocess
+
+import shutil
+
 from modularitea.atom import Atom
 from modularitea.progress_adapter import printProgressBar
 import platform
@@ -192,15 +195,23 @@ class Module:
                          suffix=self.get_busy_anim())
 
     def install_archives(self):
+        print(self.http_atoms)
         for atom in self.http_atoms:
+            print("[*] memasang", atom.get_name())
             file_location = home + ".modularitea/download/" + atom.get_url(ARCH).split('/')[-1]
-            p = subprocess.Popen(
-                ["/usr/bin/file-roller",
-                 "-e",
-                 atom.get_archive_install_dir(),
-                 file_location],
-            )
-            p.communicate()
+            command = []
+            if file_location.endswith(".tar.gz") or file_location.endswith(".tar.xz"):
+                command = ["/bin/tar", "-xvzf", file_location, "-C", atom.get_archive_install_dir()]
+            elif file_location.endswith(".zip"):
+                command = ["/usr/bin/unzip", file_location, "-d", atom.get_archive_install_dir()]
+            p = subprocess.call(command)
+            if atom.get_custom_desktop_entry():
+                shutil.copyfile(
+                    atom.get_custom_desktop_entry(),
+                    # "/usr/share/applications"
+                    "/tmp/" + atom._atom + ".desktop"
+                )
+
     def get_download_size(self):
         from urllib import request
         total_size = 0
