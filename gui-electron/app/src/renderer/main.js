@@ -12,10 +12,10 @@ Vue.use(Electron)
 Vue.use(Resource)
 Vue.use(Router)
 Vue.use(ElementUI)
-Vue.config.debug = true
+// Vue.config.debug = true
 
 const router = new Router({
-  scrollBehavior: () => ({ y: 0 }),
+  mode: "hash",
   routes
 })
 

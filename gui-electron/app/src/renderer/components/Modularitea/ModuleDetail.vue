@@ -6,7 +6,7 @@
     <h3>{{ moduleDetail.name }}</h3>
     <p>{{ moduleDetail.description }}</p>
     <el-row>
-      <el-col :span="4" v-for="(o, index) in atoms" :key="o" :offset="index > 0 ? 2 : 0">
+      <el-col :span="4" v-for="(o, index) in atoms" :key="o">
         <el-card :body-style="{ padding: '0px' }">
           <img src="" class="image">
           <div style="padding: 14px;">
@@ -50,22 +50,34 @@
         // try exec
         let self = this
         var exec = require('child_process').exec;
-        exec('pwd', function(error, stdout, stderr) {
+        let command = "x-terminal-emulator -e /usr/local/bin/modularitea-cli --module=" + this.$route.params.folderName
+        exec('gksu "' + command + '"', function(error, stdout, stderr) {
             console.log('stdout: ' + stdout);
-            self.$alert('This is a message' + stdout, 'Title', {
-              confirmButtonText: 'OK',
-              callback: action => {
-                self.$message({
-                  type: 'info',
-                  message: `action: ${ action }`
-                });
-              }
-            })
+
             console.log('stderr: ' + stderr);
             if (error !== null) {
                 console.log('exec error: ' + error);
             }
-        }).on('exit', code => console.log('final exit code is', code));
+        }).on('exit', code => {
+          let message = ''
+          switch (code) {
+            case 0:
+              message = 'Selamat kamu berhasil memesang modul ' + this.$route.params.folderName
+              break;
+            default:
+
+          }
+
+          self.$alert(message, 'Sukses', {
+            confirmButtonText: 'OK',
+            callback: action => {
+              self.$message({
+                type: 'success',
+                message: `action: ${ action }`
+              });
+            }
+          })
+        });
       },
       gotoHomepage(homepageUrl) {
         shell.openExternal(homepageUrl)
@@ -82,15 +94,10 @@
 
       var modulePackage = JSON.parse(fs.readFileSync(moduleFolderPath + '/package.json', 'utf8'));
       this.moduleDetail = modulePackage.package
-      console.log('isi package : ', modulePackage);
-      console.log('isi package : ', this.moduleDetail);
       for (var i = 0; i < modulePackage.package.atoms.length; i++) {
         var atomDetailPackage = JSON.parse(fs.readFileSync(atomsFolderPath + modulePackage.package.atoms[i] + '/package.json', 'utf8'));
-
-        console.log('-----------------', atomDetailPackage);
         this.atoms.push(atomDetailPackage.package)
       }
-
     },
     data() {
       return {
