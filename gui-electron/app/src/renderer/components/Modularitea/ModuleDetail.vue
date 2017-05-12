@@ -2,25 +2,26 @@
   <el-row>
   <el-col :span="24">
     <el-button icon="arrow-left" @click.native="backToHome">Kembali</el-button>
-    <el-button type="primary" icon="arrow-right" @click.native="installModule">Pasang</el-button>
-    <h3>{{ moduleDetail.name }}</h3>
-    <p>{{ moduleDetail.description }}</p>
-    <el-row>
-      <el-col :span="4" v-for="(o, index) in atoms" :key="o">
-        <el-card :body-style="{ padding: '0px' }">
-          <img src="" class="image">
-          <div style="padding: 14px;">
-            <span>{{ atoms[index].name }}</span>
-            <p>{{ atoms[index].description }}</p>
-            <div class="bottom clearfix">
-              <time class="time"></time>
-              <el-button type="text" class="button"  @click.native="gotoHomepage(atoms[index].homepage)">Goto Homepage</el-button>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-
+    <br/>
+    <br/>
+    <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span style="line-height: 36px;">{{ moduleDetail.name }}</span>
+        <el-button type="primary" icon="arrow-right" style="float: right;" @click.native="installModule">Pasang</el-button>
+        <!-- <el-button style="float: right;" type="primary">Operation button</el-button> -->
+      </div>
+      <div class="clearfix">
+        <h3 class="title">Komposisi :</h3>
+        <el-collapse  v-for="(o, index) in atoms" :key="index">
+            <el-collapse-item :title="o.name" :name="index">
+              <div>{{o.description}}</div>
+              <div class="">
+                <el-button type="text" class="button"  @click.native="gotoHomepage(atoms[index].homepage)">Goto Homepage</el-button>
+              </div>
+            </el-collapse-item>
+        </el-collapse>
+      </div>
+    </el-card>
   </el-col>
 </el-row>
 </template>
