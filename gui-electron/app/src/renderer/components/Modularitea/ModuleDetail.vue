@@ -1,20 +1,27 @@
 <template>
   <el-row>
-  <el-col :span="24">
-    <el-button icon="arrow-left" @click.native="backToHome">Kembali</el-button>
+  <el-carousel indicator-position="outside">
+    <el-carousel-item v-for="item in 4" :key="item">
+      <h3>{{ moduleDetail.name }}</h3>
+    </el-carousel-item>
+  </el-carousel>
+  <el-col :span="30">
+    
+    <el-button type="primary" icon="arrow-left"  @click.native="backToHome" >Kembali</el-button>
+    
     <br/>
     <br/>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
         <span style="line-height: 36px;">{{ moduleDetail.name }}</span>
-        <el-button type="primary" icon="arrow-right" style="float: right;" @click.native="installModule">Pasang</el-button>
+        <el-button type="warning" icon="arrow-right" style="float: right;" @click.native="installModule">Pasang</el-button>
         <!-- <el-button style="float: right;" type="primary">Operation button</el-button> -->
       </div>
       <div class="clearfix">
-        <h3 class="title">Komposisi :</h3>
+         <h3 class="title">List App :</h3>
         <el-collapse  v-for="(o, index) in atoms" :key="index">
             <el-collapse-item :title="o.name" :name="index">
-              <div>{{o.description}}</div>
+              <div class="desc">{{o.description}}</div>
               <div class="">
                 <el-button type="text" class="button"  @click.native="gotoHomepage(atoms[index].homepage)">Goto Homepage</el-button>
               </div>
@@ -122,6 +129,7 @@
   a {
     color: rgb(50, 174, 110);
     text-decoration: none;
+    transition:.2s;
   }
 
   a:hover {
@@ -134,4 +142,29 @@
   }
 
   li { display: inline-block; }
+
+  .title{
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  *{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+  .box-card{
+    background:blueviolet;
+  }
+  .desc{
+    color:#333;
+  }
+
+  .btn-kembali{
+    background: rgb(50, 174, 110);
+  }
+
+  .btn-kembali:hover{
+    transition: .2s;
+    background: rgb(40, 56, 76);
+  }
 </style>
