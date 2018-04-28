@@ -1,15 +1,15 @@
 <template>
   <el-row :gutter="20">
-    <el-col :span="6" v-for="module in modules">
+    <el-col :span="6" v-for="module1 in modules">
       <el-card :body-style="{ padding: '0px' }">
-        <img :src="getPic(module.package.folderName)" class="image">
+        <img :src="getPic(module1.package.folderName)" class="image">
         <!-- <img src="../../../../../../modules/Student/icon.png" alt=""> -->
         <!-- <img :src="require('../../../../../../modules/'+  module.package.icon + '/icon.png')" class="image"> -->
         <div style="padding: 14px;">
-          <h3>{{module.package.name}}</h3>
+          <h3>{{module1.package.name}}</h3>
           <div class="bottom clearfix">
-            <p>{{module.package.description}}</p>
-            <el-button type="primary" @click.native="gotoModuleDetail(module.package.folderName)">Pilih</el-button>
+            <p>{{module1.package.description}}</p>
+            <el-button type="primary" @click.native="gotoModuleDetail(module1.package.folderName)">Pilih</el-button>
           </div>
         </div>
       </el-card>
@@ -44,9 +44,11 @@
     mounted() {
       // get the root folder of electron project
       let rootFolderElectron =  process.cwd();
-      // goto parrent which is a truly root project
-      let rootFolderProject = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
-      const modulesFolderPath = rootFolderProject + '/modules';
+      let rootFolderProject1 = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
+      // let rootFolderProject2 = rootFolderProject1.substring(0, rootFolderProject1.lastIndexOf("/"));
+      // let rootFolderProject3 = rootFolderProject2.substring(0, rootFolderProject2.lastIndexOf("/"));
+      
+      const modulesFolderPath = rootFolderProject1 + '/modules';
 
       fs.readdir(modulesFolderPath, (err, files) => {
         if (err) {

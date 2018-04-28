@@ -104,11 +104,14 @@
     mounted() {
       // get the root folder of electron project
       console.log('isi param : ', this.$route.params.folderName);
+      // get the root folder of electron project
       let rootFolderElectron =  process.cwd();
-      // goto parrent which is a truly root project
-      let rootFolderProject = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
-      let moduleFolderPath = rootFolderProject + '/modules/' + this.$route.params.folderName;
-      let atomsFolderPath = rootFolderProject + '/atoms/'
+      let rootFolderProject1 = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
+      let rootFolderProject2 = rootFolderProject1.substring(0, rootFolderProject1.lastIndexOf("/"));
+      let rootFolderProject3 = rootFolderProject2.substring(0, rootFolderProject2.lastIndexOf("/"));
+      
+      let moduleFolderPath = rootFolderProject3 + '/modules/' + this.$route.params.folderName;
+      let atomsFolderPath = rootFolderProject3 + '/atoms/'
 
       var modulePackage = JSON.parse(fs.readFileSync(moduleFolderPath + '/package.json', 'utf8'));
       this.moduleDetail = modulePackage.package
