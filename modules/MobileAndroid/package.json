@@ -1,7 +1,8 @@
 {
     "package": {
         "name"          : "Mobile Android Developer",
-        "description"   : "",
+        "description"   : "Ini merupakan modul untuk Mobile Android Developer yaitu Tipe Developver yang akan berhubungan dengan pengembangan aplikasi mobile Android.",
+        "level"         : "4",
         "atoms"         : [
             "android-studio",
             "sqlitebrowser",

@@ -2,7 +2,7 @@
 
 let config = {
   // webpack-dev-server port
-  port: 8080
+  port: 9080
 }
 
 module.exports = config

@@ -9,6 +9,7 @@ USER_ATOMS_DIR = '/home/' + user + '/.modulaitea/atoms/'
 SYS_ATOMS_DIR = '/usr/share/modularitea/atoms/'
 
 
+
 class Atom:
     # atribut objek Atom
     object = None

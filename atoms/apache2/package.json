@@ -8,6 +8,12 @@
                 "name"  : "apache2"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Yayasan Perangkat Lunak Apache",
+        "rilisperdana"  : "1995",
+        "rilisstabil" : "2.4.2 / 17 April 2012",
+        "repositori" :"github.com/apache/httpd",
+        "bahasapemrograman" :"XML dan C",
+        "sistemoperasi" :"Lintas platform"
     }
 }

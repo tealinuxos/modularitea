@@ -14,6 +14,8 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
+    backgroundColor:'#eee',
+    resizable : false
   })
   mainWindow.setMenu(null);
 

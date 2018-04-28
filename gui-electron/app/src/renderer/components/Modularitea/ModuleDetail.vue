@@ -1,32 +1,39 @@
 <template>
   <el-row>
-  <el-carousel indicator-position="outside">
-    <el-carousel-item v-for="item in 4" :key="item">
-      <h3>{{ moduleDetail.name }}</h3>
-    </el-carousel-item>
-  </el-carousel>
   <el-col :span="30">
-    
     <el-button type="primary" icon="arrow-left"  @click.native="backToHome" >Kembali</el-button>
     
     <br/>
     <br/>
-    <el-card class="box-card">
+    <el-card  class="box-card" >
+      
       <div slot="header" class="clearfix">
-        <span style="line-height: 36px;">{{ moduleDetail.name }}</span>
-        <el-button type="warning" icon="arrow-right" style="float: right;" @click.native="installModule">Pasang</el-button>
+        <span style="line-height: 36px;font-size:20px;font-weight:bold">{{ moduleDetail.name }}</span>
+        <el-button type="warning" icon="el-icon-download" style="float: right;text-align:center;font-weight:bold" @click.native="installModule"><i class="el-icon-check"> Pasang</i></el-button>
         <!-- <el-button style="float: right;" type="primary">Operation button</el-button> -->
       </div>
       <div class="clearfix">
-         <h3 class="title">List App :</h3>
-        <el-collapse  v-for="(o, index) in atoms" :key="index">
-            <el-collapse-item :title="o.name" :name="index">
-              <div class="desc">{{o.description}}</div>
-              <div class="">
-                <el-button type="text" class="button"  @click.native="gotoHomepage(atoms[index].homepage)">Goto Homepage</el-button>
-              </div>
-            </el-collapse-item>
-        </el-collapse>
+        <el-tabs type="border-card">
+        <el-tab-pane :label="o.name" v-for="(o, index) in atoms" :key="index" tab-position="left">
+          <div class="desc">
+            <h3 class="desc">Deskripsi : </h3>
+             <p class="desc">{{o.description}}</p>
+             <h3 class="desc">Pengembang : </h3>
+             <p class="desc">{{o.pengembang}}</p>
+             <h3 class="desc">Rilis perdana : </h3>
+             <p class="desc">{{o.rilisperdana}}</p>
+             <h3 class="desc">Rilis Stabil : </h3>
+             <p class="desc">{{o.rilisstabil}}</p>
+             <h3 class="desc">Repositori : </h3>
+             <p class="desc">{{o.repositori}}</p>
+             <h3 class="desc">Bahasa Pemograman : </h3>
+             <p class="desc">{{o.bahasapemrograman}}</p>
+             <h3 class="desc">Sistem Operasi : </h3>
+             <p class="desc">{{o.sistemoperasi}}</p>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
+
       </div>
     </el-card>
   </el-col>
@@ -58,7 +65,7 @@
         // try exec
         let self = this
         var exec = require('child_process').exec;
-        let command = "x-terminal-emulator -e /usr/local/bin/modularitea-cli --module=" + this.$route.params.folderName
+        let command = "xterm -e /usr/local/bin/modularitea-cli/modularitea-cli --module=" + this.$route.params.folderName
         let errorMessage = ''
         exec('gksu "' + command + '"', function(error, stdout, stderr) {
             console.log('stdout: ' + stdout);
@@ -107,11 +114,11 @@
       // get the root folder of electron project
       let rootFolderElectron =  process.cwd();
       let rootFolderProject1 = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
-      let rootFolderProject2 = rootFolderProject1.substring(0, rootFolderProject1.lastIndexOf("/"));
-      let rootFolderProject3 = rootFolderProject2.substring(0, rootFolderProject2.lastIndexOf("/"));
+      // let rootFolderProject2 = rootFolderProject1.substring(0, rootFolderProject1.lastIndexOf("/"));
+      // let rootFolderProject3 = rootFolderProject2.substring(0, rootFolderProject2.lastIndexOf("/"));
       
-      let moduleFolderPath = rootFolderProject3 + '/modules/' + this.$route.params.folderName;
-      let atomsFolderPath = rootFolderProject3 + '/atoms/'
+      let moduleFolderPath = rootFolderProject1 + '/modules/' + this.$route.params.folderName;
+      let atomsFolderPath = rootFolderProject1 + '/atoms/'
 
       var modulePackage = JSON.parse(fs.readFileSync(moduleFolderPath + '/package.json', 'utf8'));
       this.moduleDetail = modulePackage.package
@@ -123,6 +130,7 @@
     data() {
       return {
         moduleDetail: {},
+        tabPos:'left',
         atoms: []
       }
     }
@@ -147,16 +155,15 @@
   li { display: inline-block; }
 
   .title{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
   }
 
   *{
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-family: sans-serif;
   }
   .box-card{
-    background:blueviolet;
+    background:rgb(8, 170, 143);
   }
   .desc{
     color:#333;

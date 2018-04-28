@@ -1,7 +1,8 @@
 {
     "package": {
         "name"          : "Back-end Web Developer",
-        "description"   : "Ini module untuk Back-end web Developer",
+        "description"   : "Ini merupakan modul untuk Back-End Web Devloper yaitu Tipe Devloper yang selalu berhubungan dengan server dan database web.",
+        "level"         : "4",
         "atoms"         : [
             "apache2",
             "php7",
@@ -14,5 +15,6 @@
             "firefoxdev",
             "git"
         ]
+        
     }
 }

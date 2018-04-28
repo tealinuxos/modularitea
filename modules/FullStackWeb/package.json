@@ -1,7 +1,8 @@
 {
     "package": {
         "name"          : "Full-stack Web Developer",
-        "description"   : "",
+        "description"   : "Ini merupakan modul untuk Full-Stack Web Devloper yaitu Tipe Devlopver yang berhubungan dengan aplikasi web dari awal hingga akhir.",
+        "level"         : "5",
         "atoms"         : [
             "apache2",
             "php7",
