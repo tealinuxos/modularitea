@@ -86,6 +86,7 @@
   },
   "dependencies": {
     "cjs-module": "^1.2.2",
-    "element-ui": "^2.3.5"
+    "element-ui": "^2.3.5",
+    "username": "^3.0.0"
   }
 }

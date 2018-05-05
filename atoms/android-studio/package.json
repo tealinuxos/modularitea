@@ -4,13 +4,12 @@
         "description"   : "Android Studio provides the fastest tools for building apps on every type of Android device.",
         "homepage"      : "https://developer.android.com/studio/index.html",
         "source": {
-            "http_archive": {
-                "any": {
-                    "url"           : "http://studio.tealinuxos.org/module/android-studio/android-studio.zip",
-                    "destination"   : "/opt"
-                }
+            "ubuntu_apt": {
+                "name"  : "android-studio",
+                "ppa"   : "ppa:maarten-fonville/android-studio"
             }
         },
-        "preferred_source": "http_archive"
+        "preferred_source"   : "ubuntu_apt"
+
     }
 }
