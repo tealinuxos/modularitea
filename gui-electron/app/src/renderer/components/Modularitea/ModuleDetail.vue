@@ -41,6 +41,7 @@
 </template>
 <script>
   import fs from 'fs'
+  var os = require("os");
   const shell = require('electron').shell;
 
   export default {
@@ -65,7 +66,7 @@
         // try exec
         let self = this
         var exec = require('child_process').exec;
-        let command = "xterm -e /usr/local/bin/modularitea-cli/modularitea-cli --module=" + this.$route.params.folderName
+        let command = "xterm -e /usr/bin/modularitea-cli.py --module=" + this.$route.params.folderName
         let errorMessage = ''
         exec('gksu "' + command + '"', function(error, stdout, stderr) {
             console.log('stdout: ' + stdout);
@@ -86,7 +87,7 @@
         }).on('exit', code => {
           let message = ''
           switch (true) {
-            case (code == 0):
+            case (error == null):
               message = 'Selamat kamu berhasil memesang modul ' + this.$route.params.folderName
               self.$alert(message, 'Sukses install modul!', {
                 confirmButtonText: 'OK',
@@ -109,16 +110,19 @@
       }
     },
     mounted() {
+      //get username
+      const username = process.env.USER;
       // get the root folder of electron project
       console.log('isi param : ', this.$route.params.folderName);
       // get the root folder of electron project
-      let rootFolderElectron =  process.cwd();
-      let rootFolderProject1 = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
-      // let rootFolderProject2 = rootFolderProject1.substring(0, rootFolderProject1.lastIndexOf("/"));
-      // let rootFolderProject3 = rootFolderProject2.substring(0, rootFolderProject2.lastIndexOf("/"));
       
-      let moduleFolderPath = rootFolderProject1 + '/modules/' + this.$route.params.folderName;
-      let atomsFolderPath = rootFolderProject1 + '/atoms/'
+      // Ketika akan build aktifkan var dibawa ini
+      // let moduleFolderPath = '/usr/share/modularitea-package/modules/' + this.$route.params.folderName;
+      // let atomsFolderPath = '/usr/share/modularitea-package/atoms/';
+
+      // Ketika mode devloper aktifkan var dibawa ini, ganti rizkirf dengan username kalian
+      let moduleFolderPath = '/home/rizkirf/Desktop/modularitea/modules/' + this.$route.params.folderName;
+      let atomsFolderPath = '/home/rizkirf/Desktop/modularitea/atoms/';
 
       var modulePackage = JSON.parse(fs.readFileSync(moduleFolderPath + '/package.json', 'utf8'));
       this.moduleDetail = modulePackage.package
