@@ -33,6 +33,7 @@
 </template>
 
 <script>
+  var os = require("os")
   import fs from 'fs'
   export default {
     data() {
@@ -66,14 +67,20 @@
 
     },
     mounted() {
+      // get username
+      const username = process.env.USER;
       // get the root folder of electron project
       let rootFolderElectron =  process.cwd();
       let rootFolderProject1 = rootFolderElectron.substring(0, rootFolderElectron.lastIndexOf("/"));
       // let rootFolderProject2 = rootFolderProject1.substring(0, rootFolderProject1.lastIndexOf("/"));
       // let rootFolderProject3 = rootFolderProject2.substring(0, rootFolderProject2.lastIndexOf("/"));
       
-      const modulesFolderPath = rootFolderProject1 + '/modules';
-
+      // Ketika akan build aktifkan var dibawa ini
+      // const modulesFolderPath ='/usr/share/modularitea-package/modules/';
+      
+      // Ketika mode devloper aktifkan var dibawa ini, ganti rizkirf dengan username kalian
+      const modulesFolderPath ='/home/rizkirf/Desktop/modularitea/modules/';
+      
       fs.readdir(modulesFolderPath, (err, files) => {
         if (err) {
           throw err;
