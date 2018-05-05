@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Pencil",
-        "description"   : "Pencil is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.",
+        "description"   : "Pencil merupakan sebuah aplikasi yang menyediakan alat prototipe GUI gratis dan berbasis open source yang dapat mudah dipasang dan digunakan untuk membuat mockups di dekstop populer.",
         "homepage"      : "http://pencil.evolus.vn/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "pencil"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Pencil Project",
+        "rilisperdana"  : "November 2015",
+        "rilisstabil" : "27 Juni 2017",
+        "repositori" :"https://pencil.evolus.vn/Downloads.html",
+        "bahasapemrograman" :"Java Script",
+        "sistemoperasi" :"Linux, Windows, MacOs"
     }
 }

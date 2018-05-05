@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "G++",
-        "description"   : "C++ compiler by GNU",
+        "description"   : "G++ adalah sebuah kompiler yang dibuat oleh GNU Project yang mendukung banyak bahasa pemrograman. G++ merupakan kompiler yang digunakan pada bahasa C++.",
         "homepage"      : "https://gcc.gnu.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "g++"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"GNU Project",
+        "rilisperdana"  : "23 Mei 1987",
+        "rilisstabil" : "2 Mei 2018",
+        "repositori" :"https://github.com/gcc-mirror/gcc",
+        "bahasapemrograman" :"C, C++",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

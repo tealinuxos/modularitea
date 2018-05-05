@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Inkscape",
-        "description"   : "Inkscape is a free and open-source vector graphics editor",
+        "description"   : "Sebuah perangkat lunak editor gambar vektor yang bersifat perangkat lunak bebas di bawah lisensi GNU GPL. Tujuan utama dari Inkscape adalah menjadi perangkat grafik mutakhir yang memenuhi standar XML, SVG, dan CSS.",
         "homepage"      : "http://inkscape.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "inkscape"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"The Inkscape Team",
+        "rilisperdana"  : "2 November 2003",
+        "rilisstabil" : "0.92.2 / 6 Agustus 2017",
+        "repositori" :"https://gitlab.com/inkscape/inkscape",
+        "bahasapemrograman" :"C++",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "GNU Octave",
-        "description"   : "Powerful mathematics-oriented syntax with built-in plotting and visualization tools",
+        "description"   : "adalah perangkat lunak bebas GNU yang dipakai untuk analisis numerik, dan setara dengan kemampuan perangkat lunak MATLAB.",
         "homepage"      : "https://www.gnu.org/software/octave/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "octave"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"John W. Eaton",
+        "rilisperdana"  : "1988",
+        "rilisstabil" : "-",
+        "repositori" :"https://hg.savannah.gnu.org/hgweb/octave",
+        "bahasapemrograman" :"C++",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

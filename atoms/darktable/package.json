@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Darktable",
-        "description"   : "An open source photography workflow application and raw developer",
+        "description"   : "Darktable adalah aplikasi gratis dan berbasis open source dibidang aplikasi workflow dan developer yang tidak berpengalaman seperti Photoshop atau GIMP, terdiri dari subset dari oprasi pengeditan gambar khususnya foto-foto produksi yang tidak bisa diedit.",
         "homepage"      : "http://www.darktable.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "darktable"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Johannes Hanika",
+        "rilisperdana"  : "Febuari 2009",
+        "rilisstabil" : "April 24, 2018",
+        "repositori" :"https://github.com/darktable-org/darktable",
+        "bahasapemrograman" :"C,GTK",
+        "sistemoperasi" :"FreeBSD, Linux, MacOS, Solaris, Windows"
     }
 }

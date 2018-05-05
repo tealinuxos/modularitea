@@ -9,6 +9,12 @@
                 "ppa"   : "ppa:webupd8team/atom"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Google, JetBrains.",
+        "rilisperdana"  : "Mei 2013",
+        "rilisstabil" : "3.1.2, April 2018",
+        "repositori" :"https://android-review.googlesource.com/",
+        "bahasapemrograman" :"Java, Kotlin",
+        "sistemoperasi" :"Windows, MacOS, Linux"
     }
 }

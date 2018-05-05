@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "GIMP",
-        "description"   : "The Free & Open Source Image Editor",
+        "description"   : "GNU Image Manipulation Program adalah sebuah aplikasi gratis berbasis open source raster  editor yang digunakan untuk mengubah atau mengedit, bebas untuk menggambar, mengubah diantara beberapa format gambar , dan beberapa tugas khusus.",
         "homepage"      : "http://gimp.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "gimp"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"GIMP Development Team",
+        "rilisperdana"  : "15 Febuari 1996",
+        "rilisstabil" : "27 April 2018",
+        "repositori" :"https://git.gnome.org/browse/gimp/",
+        "bahasapemrograman" :"C",
+        "sistemoperasi" :"Linux, MacOS, Windows, BSD, Solaris"
     }
 }
