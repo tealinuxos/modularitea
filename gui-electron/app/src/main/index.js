@@ -15,7 +15,6 @@ function createWindow () {
     height: 600,
     width: 800,
     backgroundColor:'#eee',
-    resizable : false
   })
   mainWindow.setMenu(null);
 
