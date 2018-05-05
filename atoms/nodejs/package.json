@@ -6,11 +6,11 @@
         "source": {
             "http_archive": {
                 "32bit"  : {
-                    "url"           : "http://studio.tealinuxos.org/module/nodejs/node-v6.10.3-linux-x86.tar.xz",
+                    "url"           : "https://nodejs.org/dist/v8.9.3/node-v8.9.3-linux-x86.tar.xz",
                     "destination"   : "/"
                 },
                 "64bit"  : {
-                    "url"           : "http://studio.tealinuxos.org/module/nodejs/node-v6.10.3-linux-x64.tar.xz",
+                    "url"           : "https://nodejs.org/dist/v8.9.3/node-v8.9.3-linux-x64.tar.xz",
                     "destination"   : "/"
                 }
             }
