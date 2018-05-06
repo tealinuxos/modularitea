@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col :span="24"><div class="grid-content bg-purple"><home></home></div></el-col>
+    <el-col :span="24"><div class="grid-content bg-purple"><Home></Home></div></el-col>
   </el-row>
 </template>
 

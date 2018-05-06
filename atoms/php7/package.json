@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "PHP 7",
-        "description"   : "PHP is a server-side scripting language designed primarily for web development but also used as a general-purpose programming language",
+        "description"   : "Bahasa skrip yang dapat ditanamkan atau disisipkan ke dalam HTML. PHP banyak dipakai untuk memprogram situs web dinamis. PHP dapat digunakan untuk membangun sebuah CMS.",
         "homepage"      : "http://php.net",
         "source": {
             "ubuntu_apt": {
                 "name"  : "php7.0"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"The PHP Group",
+        "rilisperdana"  : "30 November 2017",
+        "rilisstabil" : "7.2.5 / April 26, 2018",
+        "repositori" :"http://php.net/downloads.php",
+        "bahasapemrograman" :"C (Terutama, beberapa komponen C++)",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

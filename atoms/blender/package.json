@@ -1,13 +1,18 @@
 {
     "package": {
         "name"          : "Blender",
-        "description"   : "Open Source 3D creation. Free to use for any purpose, forever.",
+        "description"   : "Toolset perangkat lunak grafis komputer 3D profesional, gratis , dan open-source yang digunakan untuk membuat film animasi , efek visual , seni, model tercetak 3D , aplikasi 3D interaktif, dan permainan video.",
         "homepage"      : "https://www.blender.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "blender"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
-    }
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Yayasan Blender",
+        "rilisperdana"  : "Januari 1998",
+        "rilisstabil" : "2,79 / 11 September 2017",
+        "repositori" :"https://git.blender.org/blender.git",
+        "bahasapemrograman" :"C, C++, Phyton",
+        "sistemoperasi" :"Windows, MacOs, Linux, FreeBSD"
 }

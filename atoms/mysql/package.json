@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "MySql",
-        "description"   : "a database system used on the web",
+        "description"   : "Sebuah perangkat lunak sistem manajemen basis data SQL (Database Management System) atau DBMS yang multialur, multipengguna, dengan sekitar 6 juta instalasi di seluruh dunia.",
         "homepage"      : "https://mysql.com/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "mysql-client-core-5.7"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Oracle",
+        "rilisperdana"  : "23 Mei 1995",
+        "rilisstabil" : "5.5.24 / 7 Mei 2012",
+        "repositori" :"https://github.com/mysql/mysql-server",
+        "bahasapemrograman" :"C, C++",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

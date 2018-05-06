@@ -24,8 +24,8 @@ ACTION_ERROR = "[" + RED + "*" + NOCOLOR + "]"
 user = os.getenv("SUDO_USER")
 home = "/home/"+user+"/"
 USER_MODULE_DIR = '/home/' + user + '/.modulaitea/modules/'
-SYS_MODULE_DIR = '/usr/share/modularitea/modules/'
-# print("SYS_MODULE_DIR", SYS_MODULE_DIR)
+SYS_MODULE_DIR = '/usr/share/modularitea-package/modules/'
+print("SYS_MODULE_DIR", SYS_MODULE_DIR)
 
 ARCH = 32
 if platform.architecture()[0] == '64bit':

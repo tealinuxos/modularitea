@@ -1,7 +1,7 @@
 {
     "package": {
         "name"          : "Firefox Developer Edition",
-        "description"   : "Built for those who build the Web. Firefox Developer Edition brings your core dev tools together with some powerful new ones that will extend your ability to work across multiple platforms from one place. It’s everything you’re used to, only better. And only from Firefox",
+        "description"   : "Firefox Developer Edition adalah peramban super cepat yang menghadirkan alat pengembang canggih dan fitur terbaru seperti dukungan CSS Grid dan framework debugging.",
         "homepage"      : "https://www.mozilla.org/en-US/firefox/developer/",
         "source": {
             "ubuntu_apt": {
@@ -9,6 +9,12 @@
                 "ppa"   : "ppa:ubuntu-mozilla-daily/firefox-aurora"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Mozilla Foundation dan kontributor Mozilla Corporation",
+        "rilisperdana"  : "23 Juli 2005",
+        "rilisstabil" : "January 22, 2018",
+        "repositori" :"https://developer.mozilla.org/en-US/Firefox/Developer_Edition#The_latest_Firefox_features",
+        "bahasapemrograman" :"HTML5, CSS3, RSS, Atom, C++, JavaScript, C, Rust",
+        "sistemoperasi" :"Linux, Mac OS X, Windows"
     }
 }

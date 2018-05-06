@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Synfig",
-        "description"   : "Synfig Studio is a free and open source 2D vector graphics and timeline-based computer animation program.",
+        "description"   : "Grafis vektor 2D gratis dan open source dan program animasi komputerberbasis waktu yang dibuat oleh Robert Quattlebaum dengan kontribusi tambahan oleh Adrian Bentley.",
         "homepage"      : "http://synfig.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "synfig"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Robert Quattlebaum",
+        "rilisperdana"  : "2005",
+        "rilisstabil" : "1.2.1 / 11 September 2017",
+        "repositori" :"https://github.com/synfig/synfig",
+        "bahasapemrograman" :"C++",
+        "sistemoperasi" :"Linux, Mac OS X, Windows"
     }
 }

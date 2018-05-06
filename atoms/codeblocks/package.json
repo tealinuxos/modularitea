@@ -8,6 +8,12 @@
                 "name"  : "codeblocks"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"The Code::Blocks team",
+        "rilisperdana"  : "-",
+        "rilisstabil" : "13.12 / 27 Desember 2013",
+        "repositori" :"anonscm.debian.org/git/collab-maint/codeblocks.git",
+        "bahasapemrograman" :"C, C++",
+        "sistemoperasi" :"Widows, MacOS X, Linux, Antar Platform"
     }
 }

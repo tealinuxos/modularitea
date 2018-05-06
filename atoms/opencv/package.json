@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "OpenCV for python",
-        "description"   : "OpenCV is a library of programming functions mainly aimed at real-time computer vision",
+        "description"   : "Open Source Computer Vision adalah sebuah library fungsi pemrograman yang tujuan utamanya adalah memperlihatkan komputer secara langsung.",
         "homepage"      : "http://opencv.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "python-opencv"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Intel Corporation, Willow Garage, Itseez",
+        "rilisperdana"  : "Juni 2000",
+        "rilisstabil" : "27 Febuari 2018",
+        "repositori" :"https://github.com/opencv/opencv",
+        "bahasapemrograman" :"C, C++",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

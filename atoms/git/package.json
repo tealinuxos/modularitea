@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Git",
-        "description"   : "for Versioning Control",
+        "description"   : "sebuah version control system untuk para developer untuk dapat mengembangkan atau mengontrol pengembangan beberapasource code mereka baik team atau individual.",
         "homepage"      : "https://git-scm.com/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "git"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Junio Hamano, Linus Torvalds, and many others",
+        "rilisperdana"  : "7 April 2005",
+        "rilisstabil" : "2 April 2018",
+        "repositori" :"https://github.com/git/git",
+        "bahasapemrograman" :"C, Bourne Shell,Tcl, Perl",
+        "sistemoperasi" :"POSIX, Windows, Mac OS"
     }
 }

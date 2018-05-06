@@ -1,16 +1,20 @@
 {
     "package": {
         "name"          : "Android Studio",
-        "description"   : "Android Studio provides the fastest tools for building apps on every type of Android device.",
+        "description"   : "Pengembangan terintegrasi lingkungan (IDE) Resmi untuk Google 's Android sistem operasi, yang dibangun di atas JetBrains’ IDEA Intelli J perangkat lunak dan dirancang khusus untuk pengembangan Android.",
         "homepage"      : "https://developer.android.com/studio/index.html",
         "source": {
-            "http_archive": {
-                "any": {
-                    "url"           : "http://studio.tealinuxos.org/module/android-studio/android-studio.zip",
-                    "destination"   : "/opt"
-                }
+            "ubuntu_apt": {
+                "name"  : "android-studio",
+                "ppa"   : "ppa:maarten-fonville/android-studio"
             }
         },
-        "preferred_source": "http_archive"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Google, JetBrains.",
+        "rilisperdana"  : "Mei 2013",
+        "rilisstabil" : "3.1.2, April 2018",
+        "repositori" :"https://android-review.googlesource.com/",
+        "bahasapemrograman" :"Java, Kotlin",
+        "sistemoperasi" :"Windows, MacOS, Linux"
     }
 }

@@ -6,7 +6,8 @@ import json
 user = os.getenv("SUDO_USER")
 
 USER_ATOMS_DIR = '/home/' + user + '/.modulaitea/atoms/'
-SYS_ATOMS_DIR = '/usr/share/modularitea/atoms/'
+SYS_ATOMS_DIR = '/usr/share/modularitea-package/atoms/'
+
 
 
 class Atom:

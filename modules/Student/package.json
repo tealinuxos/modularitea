@@ -1,7 +1,8 @@
 {
     "package": {
         "name"          : "Student",
-        "description"   : "Racikan untuk mencerdas generasi bangsa",
+        "description"   : "Ini merupakan modul untuk Student yaitu Tipe Developver yang baru atau akan berlajar tentang dasar-dasar programing mulai dari zero to hero dengan racikan untuk mencerdaskan generasi bangsa.",
+        "level"         : "2",
         "atoms"         : [
             "codeblocks",
             "netbeans",

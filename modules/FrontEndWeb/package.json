@@ -1,7 +1,8 @@
 {
     "package": {
         "name"          : "Front-end Web Developer",
-        "description"   : "",
+        "description"   : "Ini merupakan modul untuk Front-End Web Devloper yaitu Tipe Devloper yang akan berhubungan dengan antarmuka tampilan web.",
+        "level"         : "3",
         "atoms"         : [
             "nodejs",
             "atom",

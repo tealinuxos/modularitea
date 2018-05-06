@@ -1,0 +1,19 @@
+{
+    "package": {
+        "name"          : "SQLite Browser",
+        "description"   : "SQLite merupakan sebuah sistem manajemen basisdata relasional yang bersifat ACID-compliant dan memiliki ukuran pustaka kode yang relatif kecil, ditulis dalam bahasa C.",
+        "homepage"      : "http://sqlitebrowser.org/",
+        "source": {
+            "ubuntu_apt": {
+                "name"  : "sqlitebrowser"
+            }
+        },
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"D. Richard Hipp",
+        "rilisperdana"  : "Agustus 2000",
+        "rilisstabil" : "3.7.13 / 11 Juni 2012",
+        "repositori" :"www.sqlite.org/src/",
+        "bahasapemrograman" :"C",
+        "sistemoperasi" :"Lintas Platform"
+    }
+}

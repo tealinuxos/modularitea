@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "MongoDB",
-        "description"   : "an open-source document database and leading NoSQL database",
+        "description"   : "Program database berorientasi dokumen lintas-platform yang bebas dan terbuka.",
         "homepage"      : "https://www.mongodb.com/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "mongodb"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"MongoDB Inc",
+        "rilisperdana"  : "11 Februari 2009",
+        "rilisstabil" : "3.6.4 / 13 April 2018",
+        "repositori" :"https://github.com/mongodb/mongo",
+        "bahasapemrograman" :"C++, C, dan JavaScript",
+        "sistemoperasi" :"Windows Vista, Linux, OS X, Saloris, FreeBSD"
     }
 }

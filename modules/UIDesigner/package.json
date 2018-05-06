@@ -1,7 +1,8 @@
 {
     "package": {
         "name"          : "User Interface Designer",
-        "description"   : "",
+        "description"   : "Ini merupakan modul untuk User Interface Designer yaitu Tipe Developver akan berhubungan dengan desain antarmuka, baik web, mobile maupun destop.",
+        "level"         : "3",
         "atoms"         : [
             "inkscape",
             "pencil",

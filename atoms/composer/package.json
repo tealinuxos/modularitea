@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Composer",
-        "description"   : "Dependency Manager for PHP",
+        "description"   : "Manajer paket level aplikasi untuk bahasa pemrograman PHP yang menyediakan format standar untuk mengelola ketergantungan perangkat lunak PHP dan pustaka yang diperlukan.",
         "homepage"      : "https://getcomposer.org/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "composer"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Nils Adermann, Jordi Boggiano",
+        "rilisperdana"  : "1 Maret 2012",
+        "rilisstabil" : "1.6.4 / 13 April 2018",
+        "repositori" :"https://github.com/composer/composer",
+        "bahasapemrograman" :"PHP",
+        "sistemoperasi" :"Lintas Platform"
     }
 }

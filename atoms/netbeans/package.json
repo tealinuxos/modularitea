@@ -1,13 +1,19 @@
 {
     "package": {
         "name"          : "Netbeans",
-        "description"   : "NetBeans IDE is FREE, open source, and has a worldwide community of users and developers",
+        "description"   : "NetBeans adalah platform pengembangan perangkat lunak yang dituliskan dalam bahasa pemrograman Java.",
         "homepage"      : "https://netbeans.com/",
         "source": {
             "ubuntu_apt": {
                 "name"  : "netbeans"
             }
         },
-        "preferred_source"   : "ubuntu_apt"
+        "preferred_source"   : "ubuntu_apt",
+        "pengembang"    :"Sun Microsystems",
+        "rilisperdana"  : "Juni 1999",
+        "rilisstabil" : "8.2 / 3 Oktober 2016",
+        "repositori" :"https://github.com/apache/incubator-netbeans",
+        "bahasapemrograman" :"Java, HTML",
+        "sistemoperasi" :"Windows, Mac OS X, Linux"
     }
 }
