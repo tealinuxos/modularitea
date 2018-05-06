@@ -5,8 +5,8 @@ import json
 # http://stackoverflow.com/questions/5721529/running-python-script-as-root-with-sudo-what-is-the-username-of-the-effectiv
 user = os.getenv("SUDO_USER")
 
-#USER_ATOMS_DIR = '/home/' + user + '/.modulaitea/atoms/'
-SYS_ATOMS_DIR = '/usr/share/modularitea/atoms/'
+USER_ATOMS_DIR = '/home/' + user + '/.modulaitea/atoms/'
+SYS_ATOMS_DIR = '/usr/share/modularitea-package/atoms/'
 
 
 

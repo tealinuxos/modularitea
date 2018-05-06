@@ -22,9 +22,9 @@ ACTION_SUCCESS = "[" + GREEN + "*" + NOCOLOR + "]"
 ACTION_ERROR = "[" + RED + "*" + NOCOLOR + "]"
 
 user = os.getenv("SUDO_USER")
-#home = "/home/"+user+"/"
-#USER_MODULE_DIR = '/home/' + user + '/.modulaitea/modules/'
-SYS_MODULE_DIR = '/usr/share/modularitea/modules/'
+home = "/home/"+user+"/"
+USER_MODULE_DIR = '/home/' + user + '/.modulaitea/modules/'
+SYS_MODULE_DIR = '/usr/share/modularitea-package/modules/'
 print("SYS_MODULE_DIR", SYS_MODULE_DIR)
 
 ARCH = 32
@@ -55,11 +55,11 @@ class Module:
             return "[   \033[0;32m*\033[0m]"
 
     def __init__(self, module_name):
-        # if os.path.exists(USER_MODULE_DIR + module_name):
-        #     with open(USER_MODULE_DIR + module_name + '/package.json') as data:
-        #         self.module = json.load(data)
-        #     # print("module", module_name, "found in user dir")
-        if os.path.exists(SYS_MODULE_DIR + module_name):
+        if os.path.exists(USER_MODULE_DIR + module_name):
+            with open(USER_MODULE_DIR + module_name + '/package.json') as data:
+                self.module = json.load(data)
+            # print("module", module_name, "found in user dir")
+        elif os.path.exists(SYS_MODULE_DIR + module_name):
             with open(SYS_MODULE_DIR + module_name + '/package.json') as data:
                 self.module = json.load(data)
             # print("module", module_name, "found in sys dir")
